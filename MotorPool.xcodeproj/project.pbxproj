@@ -44,8 +44,6 @@
 			children = (
 				CD9E7A292B342BC700A375EE /* .gitignore */,
 				A0624C2B2B34191F00AFF55C /* MotorPool */,
-				A0624C352B34192000AFF55C /* Assets.xcassets */,
-				A0624C402B34193500AFF55C /* Supporting */,
 				A0624C2A2B34191F00AFF55C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +59,8 @@
 		A0624C2B2B34191F00AFF55C /* MotorPool */ = {
 			isa = PBXGroup;
 			children = (
+				A0624C352B34192000AFF55C /* Assets.xcassets */,
+				A0624C402B34193500AFF55C /* Supporting */,
 				A0624C412B34195D00AFF55C /* ViewControllers */,
 				A0624C422B34196A00AFF55C /* Storyboards */,
 			);
