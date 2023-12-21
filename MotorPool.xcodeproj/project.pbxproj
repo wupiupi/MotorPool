@@ -13,6 +13,7 @@
 		A0624C342B34191F00AFF55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0624C322B34191F00AFF55C /* Main.storyboard */; };
 		A0624C362B34192000AFF55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0624C352B34192000AFF55C /* Assets.xcassets */; };
 		A0624C392B34192000AFF55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0624C372B34192000AFF55C /* LaunchScreen.storyboard */; };
+		CD9E7A2A2B342BC700A375EE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CD9E7A292B342BC700A375EE /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A0624C352B34192000AFF55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0624C382B34192000AFF55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0624C3A2B34192000AFF55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD9E7A292B342BC700A375EE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		A0624C202B34191F00AFF55C = {
 			isa = PBXGroup;
 			children = (
+				CD9E7A292B342BC700A375EE /* .gitignore */,
 				A0624C2B2B34191F00AFF55C /* MotorPool */,
 				A0624C352B34192000AFF55C /* Assets.xcassets */,
 				A0624C402B34193500AFF55C /* Supporting */,
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9E7A2A2B342BC700A375EE /* .gitignore in Resources */,
 				A0624C392B34192000AFF55C /* LaunchScreen.storyboard in Resources */,
 				A0624C362B34192000AFF55C /* Assets.xcassets in Resources */,
 				A0624C342B34191F00AFF55C /* Main.storyboard in Resources */,
