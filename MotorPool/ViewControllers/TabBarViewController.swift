@@ -14,13 +14,14 @@ final class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         setTabBarItems()
-        transferData()
+        fetchData()
     }
     
-    private func transferData() {
+    private func fetchData() {
         self.viewControllers?.forEach { viewController in
-            if let autoListVC = viewController as? AutoListViewController {
-                autoListVC.user = user
+            if let navVC = viewController as? UINavigationController {
+                guard let autoList = navVC.topViewController as? AutoListViewController else { return }
+                autoList.user = user
             } else if let totalInfoVC = viewController as? TotalInfoViewController {
                 totalInfoVC.user = user
             }
