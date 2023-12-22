@@ -65,16 +65,28 @@
                     <view key="view" contentMode="scaleToFill" id="aFc-K5-3LN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="a5G-Qt-mNm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="k4v-c9-ZTl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a5G-Qt-mNm" firstAttribute="leading" secondItem="aFc-K5-3LN" secondAttribute="leading" id="2Qc-9q-GSB"/>
+                            <constraint firstItem="a5G-Qt-mNm" firstAttribute="top" secondItem="aFc-K5-3LN" secondAttribute="top" id="9Ta-eF-iSe"/>
+                            <constraint firstAttribute="bottom" secondItem="a5G-Qt-mNm" secondAttribute="bottom" id="Rg8-YR-uYb"/>
+                            <constraint firstAttribute="trailing" secondItem="a5G-Qt-mNm" secondAttribute="trailing" id="S7h-XG-PzK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dB-k0-Y4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="737"/>
+            <point key="canvasLocation" x="2855.7251908396947" y="736.61971830985919"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="1680" height="1050"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
