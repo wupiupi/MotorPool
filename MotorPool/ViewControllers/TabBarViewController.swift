@@ -12,20 +12,19 @@ final class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        
         setTabBarItems()
         transferData()
     }
     
     private func transferData() {
-        guard let navigationVC = viewControllers?.first as? UINavigationController else { return }
-        guard let totalInfoVC = viewControllers?[1] as? AutoListViewController else { return }
-        
-        let autoListVC = navigationVC.topViewController
-        guard let autoListVC = autoListVC as? AutoListViewController else { return }
-        autoListVC.user = user
-        
-        totalInfoVC.user = user
+        self.viewControllers?.forEach { viewController in
+            if let autoListVC = viewController as? AutoListViewController {
+                autoListVC.user = user
+            } else if let totalInfoVC = viewController as? TotalInfoViewController {
+                totalInfoVC.user = user
+            }
+        }
     }
     
     private func setTabBarItems() {
