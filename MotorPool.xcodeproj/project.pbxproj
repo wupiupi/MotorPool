@@ -21,6 +21,7 @@
 		CD179CD12B35A3AB00BE4ADA /* TotalInfoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CCF2B35A3AB00BE4ADA /* TotalInfoSB.storyboard */; };
 		CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */; };
 		CD375F292B344A1E00A6285F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD375F282B344A1E00A6285F /* User.swift */; };
+		CD69C0862B35F67D00AFD8F9 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = CD69C0852B35F67D00AFD8F9 /* .gitattributes */; };
 		CD9E7A2A2B342BC700A375EE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CD9E7A292B342BC700A375EE /* .gitignore */; };
 		CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E7A302B343B7400A375EE /* DataStore.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		CD179CD02B35A3AB00BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/TotalInfoSB.storyboard; sourceTree = "<group>"; };
 		CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CD375F282B344A1E00A6285F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD69C0852B35F67D00AFD8F9 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		CD9E7A292B342BC700A375EE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CD9E7A302B343B7400A375EE /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +62,7 @@
 		A0624C202B34191F00AFF55C = {
 			isa = PBXGroup;
 			children = (
+				CD69C0852B35F67D00AFD8F9 /* .gitattributes */,
 				CD9E7A292B342BC700A375EE /* .gitignore */,
 				A0624C2B2B34191F00AFF55C /* MotorPool */,
 				A0624C2A2B34191F00AFF55C /* Products */,
@@ -202,6 +205,7 @@
 				A0624C362B34192000AFF55C /* Assets.xcassets in Resources */,
 				CD179CB42B3595C200BE4ADA /* Main.storyboard in Resources */,
 				CD179CCE2B35A36400BE4ADA /* AboutSB.storyboard in Resources */,
+				CD69C0862B35F67D00AFD8F9 /* .gitattributes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
