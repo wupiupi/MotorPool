@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A04760362B35F8FE00CB740A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = A04760352B35F8FE00CB740A /* .gitattributes */; };
-		A04760382B35FB4800CB740A /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04760372B35FB4800CB740A /* test2.swift */; };
 		A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2C2B34191F00AFF55C /* AppDelegate.swift */; };
 		A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */; };
 		A0624C362B34192000AFF55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0624C352B34192000AFF55C /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		A04760352B35F8FE00CB740A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
-		A04760372B35FB4800CB740A /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
 		A0624C292B34191F00AFF55C /* MotorPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0624C2C2B34191F00AFF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
 				CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */,
-				A04760372B35FB4800CB740A /* test2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -227,7 +224,6 @@
 				A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */,
 				CD179CB62B35979400BE4ADA /* TabBarViewController.swift in Sources */,
 				CD375F292B344A1E00A6285F /* User.swift in Sources */,
-				A04760382B35FB4800CB740A /* test2.swift in Sources */,
 				A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
