@@ -5,4 +5,4 @@
 
 
 
-_by wupiupi & ice43_
+_team: wupiupi, ice43 and pave1iOS_
