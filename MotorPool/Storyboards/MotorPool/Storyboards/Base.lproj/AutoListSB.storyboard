@@ -14,8 +14,8 @@
             <objects>
                 <navigationController id="vCP-eL-tPR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Cuc-IQ-OiZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wD2-T2-JwL">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wD2-T2-JwL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="1184" y="737"/>
         </scene>
-        <!--Auto List View Controller-->
+        <!--Cars-->
         <scene sceneID="BQw-6S-VQA">
             <objects>
                 <tableViewController id="SUA-Su-fSa" customClass="AutoListViewController" customModule="MotorPool" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                             <outlet property="delegate" destination="SUA-Su-fSa" id="seA-y9-WqM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="d6c-R7-fAD"/>
+                    <navigationItem key="navigationItem" title="Cars" id="d6c-R7-fAD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci6-6c-vIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
