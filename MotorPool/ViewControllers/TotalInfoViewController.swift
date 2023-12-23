@@ -36,9 +36,7 @@ final class TotalInfoViewController: UIViewController {
     private func totalCost() -> String {
         var totalCost = 0.0
         
-        user.autos.forEach { auto in
-            totalCost += auto.price
-        }
+        user.autos.forEach { totalCost += Double($0.price) ?? 0 }
         
         var stringCost = String(format: "%.3f", totalCost)
         
