@@ -27,7 +27,7 @@ final class TotalInfoViewController: UIViewController {
         
         user.autos.forEach { auto in
             carCountLabel.text = String(user.autos.count)
-            carFavoriteLabel.text = auto.autoName
+            carFavoriteLabel.text = auto.brand
             carTotalCostLabel.text = totalCost()
             carTotalFuelLabel.text = String(auto.fuelConsumption)
         }

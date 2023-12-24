@@ -25,7 +25,8 @@ struct User {
 }
 
 struct Auto {
-    let autoName: String
+    let brand: String
+    let model: String
     let price: Double
     let description: String
     let fuelConsumption: Double
@@ -37,7 +38,8 @@ struct Auto {
         for (brand, values) in dataStore.cars {
             cars.append(
                 Auto(
-                    autoName: brand,
+                    brand: brand,
+                    model: values.model,
                     price: values.price,
                     description: values.description,
                     fuelConsumption: values.fuelConsumption
