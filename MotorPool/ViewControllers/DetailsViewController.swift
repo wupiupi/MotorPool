@@ -9,6 +9,5 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     var user: User!
-    
-    
 }
+
