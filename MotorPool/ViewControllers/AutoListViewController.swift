@@ -3,17 +3,21 @@
 //  MotorPool
 //
 //  Created by Serge Bowski on 12/22/23.
+//  Functionality is made by wupiupi.
 //
 
 import UIKit
 
 final class AutoListViewController: UITableViewController {
     
+    // MARK: - Variables
     var user: User!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+   
+}
+
+// MARK: - UITableViewDataSource
+extension AutoListViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         user.autos.count
