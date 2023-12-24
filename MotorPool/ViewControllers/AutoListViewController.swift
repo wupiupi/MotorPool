@@ -13,7 +13,10 @@ final class AutoListViewController: UITableViewController {
     // MARK: - Variables
     var user: User!
     
-   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.rowHeight = 80
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -29,8 +32,10 @@ extension AutoListViewController {
         
         var content = cell.defaultContentConfiguration()
         content.text = auto.autoName
-        
+        content.image = UIImage(named: auto.autoName)
+        content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
+        
         return cell
     }
 }
