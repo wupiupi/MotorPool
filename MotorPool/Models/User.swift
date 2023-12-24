@@ -19,44 +19,61 @@ struct User {
         return User(
             username: dataStore.username,
             password: dataStore.password,
-            autos: Auto.getAutos()
+            autos: Auto.getCars()
         )
     }
 }
 
 struct Auto {
     let autoName: String
-    let price: String
+    let price: Double
     let description: String
-    let fuelConsumption: String
+    let fuelConsumption: Double
     
-    static func getAutos() -> [Auto] {
-        var autos: [Auto] = []
+    static func getCars() -> [Auto] {
+        var cars: [Auto] = []
         let dataStore = DataStore.shared
         
-        let names = dataStore.autoNames
-        let prices = dataStore.prices
-        let descriptions = dataStore.descriptions
-        let fuelConsumptions = dataStore.fuelConsumption
-        
-        let iterationCount = min(
-            names.count,
-            prices.count,
-            descriptions.count,
-            fuelConsumptions.count
-        )
-        
-        for index in 0..<iterationCount {
-            let auto = Auto(
-                autoName: names[index],
-                price: prices[index],
-                description: descriptions[index],
-                fuelConsumption: fuelConsumptions[index]
+        for (brand, values) in dataStore.cars {
+            cars.append(
+                Auto(
+                    autoName: brand,
+                    price: values.price,
+                    description: values.description,
+                    fuelConsumption: values.fuelConsumption
+                )
             )
-            
-            autos.append(auto)
         }
-        
-        return autos
+        return cars
     }
+    
+//    static func getAutos() -> [Auto] {
+//        var autos: [Auto] = []
+//        let dataStore = DataStore.shared
+//        
+//        let names = dataStore.autoNames
+//        let prices = dataStore.prices
+//        let descriptions = dataStore.descriptions
+//        let fuelConsumptions = dataStore.fuelConsumption
+//        
+//        let iterationCount = min(
+//            names.count,
+//            prices.count,
+//            descriptions.count,
+//            fuelConsumptions.count
+//        )
+//        
+//        for index in 0..<iterationCount {
+//            let auto = Auto(
+//                autoName: names[index],
+//                price: prices[index],
+//                description: descriptions[index],
+//                fuelConsumption: fuelConsumptions[index]
+//            )
+//            
+//            autos.append(auto)
+//        }
+//        
+//        return autos
+//    }
 }
