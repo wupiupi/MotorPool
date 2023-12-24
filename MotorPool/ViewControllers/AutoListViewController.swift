@@ -28,7 +28,7 @@ extension AutoListViewController {
         let auto = user.autos[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-
+        
         
         cell.contentConfiguration = content
         return cell
