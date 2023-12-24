@@ -3,6 +3,7 @@
 //  MotorPool
 //
 //  Created by Serge Bowski on 12/22/23.
+//  Functionality is made by wupiupi.
 //
 
 import UIKit
@@ -11,7 +12,6 @@ final class DetailsViewController: UIViewController {
     
     // MARK: - Variables
     var user: User!
-    
     
     // MARK: - IB Outlets
     @IBOutlet var carModelLabel: UILabel!
