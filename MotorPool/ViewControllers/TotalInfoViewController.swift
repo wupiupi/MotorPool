@@ -19,15 +19,13 @@ final class TotalInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        
-        
     }
     
     private func updateUI() {
         
         user.autos.forEach { auto in
             carCountLabel.text = String(user.autos.count)
-            carFavoriteLabel.text = auto.brand + auto.model
+            carFavoriteLabel.text = favoriteCar()
             carTotalCostLabel.text = totalCost()
             carTotalFuelLabel.text = totalFuel()
         }
@@ -51,6 +49,20 @@ final class TotalInfoViewController: UIViewController {
         user.autos.forEach { totalFuel += $0.fuelConsumption }
         
         return String(format: "%.1f l/100 km" , totalFuel)
+    }
+    
+    private func favoriteCar() -> String {
+        var favoriteCars: [String: Int] = [:]
+        let modelCars = user.autos.map { $0.model }
+        
+        for modelCar in modelCars {
+            favoriteCars[modelCar, default: 0] += 1
+        }
+        
+        let sortedFavoriteCars = favoriteCars.sorted { $0.value > $1.value }
+        guard let mostFavoriteCar = sortedFavoriteCars.first?.key else { return "" }
+        
+        return mostFavoriteCar
     }
 
     
