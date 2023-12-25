@@ -35,11 +35,9 @@ final class TotalInfoViewController: UIViewController {
     
     private func totalCost() -> String {
         var totalCost = 0.0
-        
-        user.autos.forEach { totalCost += Double($0.price) ?? 0 }
+        user.autos.forEach { totalCost += $0.price }
         
         var stringCost = String(format: "%.3f", totalCost)
-        
         if totalCost > 1000 {
             stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
         }
@@ -50,9 +48,9 @@ final class TotalInfoViewController: UIViewController {
     private func totalFuel() -> String {
         var totalFuel = 0.0
         
-        user.autos.forEach { totalFuel += Double($0.fuelConsumption) ?? 0 }
+        user.autos.forEach { totalFuel += $0.fuelConsumption }
         
-        return String(format: "%.1f L/100 km" , totalFuel)
+        return String(format: "%.1f l/100 km" , totalFuel)
     }
 
     
