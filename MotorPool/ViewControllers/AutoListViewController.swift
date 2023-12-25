@@ -31,8 +31,9 @@ extension AutoListViewController {
         let auto = user.autos[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        content.text = auto.autoName
-        content.image = UIImage(named: auto.autoName)
+        content.text = auto.brand
+        content.secondaryText = auto.model
+        content.image = UIImage(named: auto.brand + " " + auto.model)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
         
