@@ -13,9 +13,18 @@ final class AutoListViewController: UITableViewController {
     // MARK: - Variables
     var user: User!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let detailsVC = segue.destination as? DetailsViewController else { return }
+        
+        detailsVC.car = user.autos[indexPath.row]
     }
 }
 
@@ -35,8 +44,15 @@ extension AutoListViewController {
         content.secondaryText = auto.model
         content.image = UIImage(named: auto.brand + " " + auto.model)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
-        cell.contentConfiguration = content
         
+        cell.contentConfiguration = content
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension AutoListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
