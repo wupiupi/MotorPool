@@ -27,7 +27,7 @@ final class TotalInfoViewController: UIViewController {
         
         user.autos.forEach { auto in
             carCountLabel.text = String(user.autos.count)
-            carFavoriteLabel.text = auto.autoName
+            carFavoriteLabel.text = auto.brand + auto.model
             carTotalCostLabel.text = totalCost()
             carTotalFuelLabel.text = totalFuel()
         }
@@ -36,7 +36,9 @@ final class TotalInfoViewController: UIViewController {
     private func totalCost() -> String {
         var totalCost = 0.0
         
-        user.autos.forEach { totalCost += Double($0.price) ?? 0 }
+        user.autos.forEach { auto in
+            totalCost += auto.price
+        }
         
         var stringCost = String(format: "%.3f", totalCost)
         
