@@ -27,7 +27,7 @@ final class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        carImageView.image = UIImage(named: car.brand + " " + car.model)
+        carImageView.image = UIImage(named: car.model + " " + car.brand)
         
         brandLabel.text = "Brand: \(car.brand)"
         modelLabel.text = "Model: \(car.model)"
