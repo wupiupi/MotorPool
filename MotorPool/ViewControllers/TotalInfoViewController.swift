@@ -48,6 +48,14 @@ final class TotalInfoViewController: UIViewController {
         
         return "\(stringCost) $"
     }
+    
+    private func totalFuel() -> String {
+        var totalFuel = 0.0
+        
+        user.autos.forEach { totalFuel += Double($0.fuelConsumption) ?? 0 }
+        
+        return String(format: "%.1f L/100 km" , totalFuel)
+    }
 
     
 }
