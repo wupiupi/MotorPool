@@ -82,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="a5G-Qt-mNm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a5G-Qt-mNm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o7-qn-wIW">
@@ -163,6 +163,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backView" destination="a5G-Qt-mNm" id="teV-Hc-XVu"/>
                         <outlet property="brandLabel" destination="VRC-uD-YPi" id="htW-k6-pn5"/>
                         <outlet property="carImageView" destination="vLF-s3-vfV" id="Pge-k1-BYH"/>
                         <outlet property="descriptionLabel" destination="Ji7-5B-AAy" id="79W-oS-B9C"/>
@@ -177,8 +178,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BMW M5 F10" width="2048" height="2048"/>
-        <image name="back" width="1680" height="1050"/>
+        <image name="BMW M5 F10" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

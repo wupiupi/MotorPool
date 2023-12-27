@@ -23,6 +23,8 @@ final class DetailsViewController: UIViewController {
     
     @IBOutlet var carImageView: UIImageView!
     
+    @IBOutlet weak var backView: UIImageView!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,8 @@ final class DetailsViewController: UIViewController {
         fuelConsumptionLabel.text = "\(String(car.fuelConsumption)) l/100km"
         
         descriptionLabel.text = car.description
+        
+        overlayBlurredBackgroundView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -46,6 +50,16 @@ final class DetailsViewController: UIViewController {
     // MARK: - IB Action
     @IBAction private func doneButtonDidTapped() {
         dismiss(animated: true)
+    }
+    
+    private func overlayBlurredBackgroundView() {
+        let blurredBackgroundView = UIVisualEffectView()
+        
+        blurredBackgroundView.frame = view.frame
+        blurredBackgroundView.effect = UIBlurEffect(style: .dark)
+        
+        backView.addSubview(blurredBackgroundView)
+        view.backgroundColor = .clear
     }
 }
 
