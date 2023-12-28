@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */; };
+		46A1C13E2B3C886200BB4F7E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */; };
 		A04760362B35F8FE00CB740A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = A04760352B35F8FE00CB740A /* .gitattributes */; };
 		A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2C2B34191F00AFF55C /* AppDelegate.swift */; };
 		A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarTableViewCell.swift; sourceTree = "<group>"; };
+		46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A04760352B35F8FE00CB740A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		A0624C292B34191F00AFF55C /* MotorPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0624C2C2B34191F00AFF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
 				CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */,
+				46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */,
+				46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */,
+				46A1C13E2B3C886200BB4F7E /* InfoViewController.swift in Sources */,
 				CD179CAF2B35931100BE4ADA /* LoginViewController.swift in Sources */,
+				46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */,
 				CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */,
 				CD179CBE2B359BF800BE4ADA /* TotalInfoViewController.swift in Sources */,
 				CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */,

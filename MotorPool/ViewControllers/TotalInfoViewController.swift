@@ -36,8 +36,10 @@ final class TotalInfoViewController: UIViewController {
     
     // MARK: Action
     @IBAction func customButtonDidTapped() {
-        customStackView.isHidden = true
+//        customStackView.isHidden = true
         blurEffect.isHidden = true
+        
+        animatedEffectOutFromView()
     }
     
     @IBAction func chooseRandomCarDidTapped() {
@@ -56,7 +58,7 @@ final class TotalInfoViewController: UIViewController {
         customLabel.text = "\(randomCar?.key ?? "") \(randomCar?.value ?? "")"
         
         blurEffect.layer.backgroundColor = UIColor(patternImage: .back).cgColor
-        animatedEffectFromView()
+        animatedEffectInFromView()
     }
 }
 
@@ -109,7 +111,8 @@ private extension TotalInfoViewController {
         customLabel.font = .systemFont(ofSize: 25)
     }
     
-    func animatedEffectFromView() {
+    // MARK: Animated
+    func animatedEffectInFromView() {
         self.blurEffect.isHidden = false
         view.addSubview(customStackView)
         customStackView.center = view.center
@@ -121,6 +124,15 @@ private extension TotalInfoViewController {
             self.blurEffect.effect = self.effect
             self.customView.alpha = 1
             self.customView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func animatedEffectOutFromView() {
+        UIView.animate(withDuration: 0.3) {
+            self.customView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.customView.alpha = 0
+            
+//            self.blurEffect.effect = nil
         }
     }
     
