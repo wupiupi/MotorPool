@@ -63,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46A1C13F2B3E0CA400BB4F7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A0624C202B34191F00AFF55C = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +94,7 @@
 			children = (
 				A0624C412B34195D00AFF55C /* ViewControllers */,
 				A0624C422B34196A00AFF55C /* Storyboards */,
+				46A1C13F2B3E0CA400BB4F7E /* Views */,
 				CD375F272B3449E200A6285F /* Models */,
 				CD9E7A2E2B343B4C00A375EE /* Services */,
 				A0624C402B34193500AFF55C /* Supporting */,
@@ -112,7 +121,6 @@
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
 				CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */,
-				46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */,
 				46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
