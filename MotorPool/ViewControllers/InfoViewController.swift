@@ -9,6 +9,7 @@ import UIKit
 
 final class InfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: IBOutlets
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet var randomCarView: UIView! {
@@ -40,6 +41,15 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    @IBOutlet var visualEffectView: UIVisualEffectView! {
+        didSet {
+            visualEffectView.center = view.center
+            visualEffectView.bounds = view.bounds
+            visualEffectView.backgroundColor = UIColor(patternImage: .back)
+        }
+    }
+    
+    // MARK: Properties
     var user: User!
     
     override func viewDidLoad() {
@@ -48,6 +58,7 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
     }
     
+    // MARK: IBAction func
     @IBAction func randomCarDidTapped() {
         animateOut(view: randomCarView)
     }
@@ -68,11 +79,11 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
         randomCarImageView.image = UIImage(named: "\(randomCar?.key ?? "") \(randomCar?.value ?? "")")
         randomCarTitleLabel.text = "\(randomCar?.key ?? "") \(randomCar?.value ?? "")"
         
+        view.addSubview(visualEffectView)
         view.addSubview(randomCarView)
+        
         animateIn(view: randomCarView)
     }
-    
-    
 }
 
 // MARK: InfoViewControllerDataSource
@@ -84,7 +95,6 @@ extension InfoViewController {
     func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
@@ -134,7 +144,7 @@ extension InfoViewController {
     }
 }
 
-// MARK: Function
+// MARK: Logic func
 private extension InfoViewController {
     
     func favoriteCar() -> String {
@@ -160,9 +170,11 @@ private extension InfoViewController {
 private extension InfoViewController {
     func animateIn(view: UIView) {
         view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        visualEffectView.alpha = 0
         view.alpha = 0
         
         UIView.animate(withDuration: 1.5) {
+            self.visualEffectView.alpha = 1
             view.alpha = 1
             view.transform = CGAffineTransform.identity
         }
@@ -172,9 +184,11 @@ private extension InfoViewController {
     func animateOut(view: UIView) {
         
         UIView.animate(withDuration: 1.0) {
+            self.visualEffectView.alpha = 0
             view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             view.alpha = 0
         } completion: { _ in
+            self.visualEffectView.removeFromSuperview()
             view.removeFromSuperview()
         }
 
