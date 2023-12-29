@@ -11,10 +11,34 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet var tableView: UITableView!
     
-    @IBOutlet var randomCarView: UIView!
-    @IBOutlet var randomCarImageView: UIImageView!
-    @IBOutlet var randomCarTitleLabel: UILabel!
-    @IBOutlet var randomCarButton: UIButton!
+    @IBOutlet var randomCarView: UIView! {
+        didSet {
+            randomCarView.center = view.center
+            randomCarView.layer.cornerRadius = 10
+            randomCarView.layer.borderWidth = 1
+            randomCarView.layer.borderColor = UIColor.black.cgColor
+        }
+    }
+    @IBOutlet var randomCarImageView: UIImageView! {
+        didSet {
+            randomCarImageView.layer.cornerRadius = 10
+        }
+    }
+    @IBOutlet var randomCarTitleLabel: UILabel! {
+        didSet {
+            randomCarTitleLabel.font = .boldSystemFont(ofSize: 18)
+        }
+    }
+    @IBOutlet var randomCarButton: UIButton! {
+        didSet {
+            randomCarButton.layer.cornerRadius = 5
+            randomCarButton.layer.borderWidth = 1
+            randomCarButton.backgroundColor = .black
+            randomCarButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+            randomCarButton.setTitleColor(.white, for: .normal)
+            randomCarButton.setTitle("GET STARTED 😈", for: .normal)
+        }
+    }
     
     var user: User!
     
@@ -22,9 +46,12 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
-       
     }
+    
+    @IBAction func randomCarDidTapped() {
+        animateOut(view: randomCarView)
+    }
+    
     
     @IBAction func carForTodayDidTapped() {
         var carDict: [String: String] = [:]
@@ -37,8 +64,12 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
         }
 
         let randomCar = carDict.randomElement()
-//        customImageView.image = UIImage(named: "\(randomCar?.key ?? "") \(randomCar?.value ?? "")")
-//        customLabel.text = "\(randomCar?.key ?? "") \(randomCar?.value ?? "")"
+        
+        randomCarImageView.image = UIImage(named: "\(randomCar?.key ?? "") \(randomCar?.value ?? "")")
+        randomCarTitleLabel.text = "\(randomCar?.key ?? "") \(randomCar?.value ?? "")"
+        
+        view.addSubview(randomCarView)
+        animateIn(view: randomCarView)
     }
     
     
@@ -122,5 +153,30 @@ private extension InfoViewController {
     
     func totalCar() -> String {
         return String(user.autos.count)
+    }
+}
+
+// MARK: Animate func
+private extension InfoViewController {
+    func animateIn(view: UIView) {
+        view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        view.alpha = 0
+        
+        UIView.animate(withDuration: 1.5) {
+            view.alpha = 1
+            view.transform = CGAffineTransform.identity
+        }
+        
+    }
+    
+    func animateOut(view: UIView) {
+        
+        UIView.animate(withDuration: 1.0) {
+            view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            view.alpha = 0
+        } completion: { _ in
+            view.removeFromSuperview()
+        }
+
     }
 }
