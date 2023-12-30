@@ -48,7 +48,7 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
             visualEffectView.backgroundColor = UIColor(patternImage: .back)
         }
     }
-    
+        
     // MARK: Properties
     var user: User!
     
@@ -62,7 +62,6 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
     @IBAction func randomCarDidTapped() {
         animateOut(view: randomCarView)
     }
-    
     
     @IBAction func carForTodayDidTapped() {
         var carDict: [String: String] = [:]
@@ -93,7 +92,7 @@ extension InfoViewController {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,6 +103,10 @@ extension InfoViewController {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "totalCell", for: indexPath) as? TotalCarsTableViewCell else { return UITableViewCell() }
+            
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell", for: indexPath) as? TotalPriceTableViewCell else { return UITableViewCell() }
             
             return cell
         default:
@@ -134,6 +137,15 @@ extension InfoViewController {
             totalCell?.totalLabel.text = totalCar()
             
             return totalCell
+        case 2:
+            let priceCell = tableView.dequeueReusableCell(withIdentifier: "priceCell")
+            as? TotalPriceTableViewCell
+            
+            priceCell?.priceUSD = priceInUSD()
+            priceCell?.priceEUR = priceInEUR()
+            priceCell?.priceRUB = priceInRUB()
+            
+            return priceCell
         default:
             return UIView()
         }
@@ -164,6 +176,27 @@ private extension InfoViewController {
     func totalCar() -> String {
         return String(user.autos.count)
     }
+    
+    func priceInUSD() -> String {
+        
+        var totalCost = 0.0
+        user?.autos.forEach { totalCost += $0.price }
+
+        var stringCost = String(format: "%.3f", totalCost)
+        if totalCost > 1000 {
+            stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
+        }
+        
+        return "\(stringCost) $"
+    }
+    
+    func priceInRUB() -> String {
+        "RUB"
+    }
+    
+    func priceInEUR() -> String {
+        "eur"
+    }
 }
 
 // MARK: Animate func
@@ -178,7 +211,6 @@ private extension InfoViewController {
             view.alpha = 1
             view.transform = CGAffineTransform.identity
         }
-        
     }
     
     func animateOut(view: UIView) {
@@ -191,6 +223,5 @@ private extension InfoViewController {
             self.visualEffectView.removeFromSuperview()
             view.removeFromSuperview()
         }
-
     }
 }
