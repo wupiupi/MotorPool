@@ -187,15 +187,39 @@ private extension InfoViewController {
             stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
         }
         
-        return "\(stringCost) $"
-    }
-    
-    func priceInRUB() -> String {
-        "RUB"
+        let formattedCost = stringCost.map { String($0) + " " }
+        
+        return "\(formattedCost.joined(separator: " ")) $"
     }
     
     func priceInEUR() -> String {
-        "eur"
+        var totalCost = 0.0
+        user?.autos.forEach { totalCost += $0.price }
+        let totalEUR = totalCost * 1.2
+
+        var stringCost = String(format: "%.3f", totalEUR)
+        if totalCost > 1000 {
+            stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
+        }
+        
+        let formattedCost = stringCost.map { String($0) + " " }
+        
+        return "\(formattedCost.joined(separator: " ")) €"
+    }
+    
+    func priceInRUB() -> String {
+        var totalCost = 0.0
+        user?.autos.forEach { totalCost += $0.price }
+        let totalRUB = totalCost * 90
+
+        var stringCost = String(format: "%.3f", totalRUB)
+        if totalCost > 1000 {
+            stringCost.insert(".", at: stringCost.index(stringCost.startIndex, offsetBy: 3))
+        }
+        
+        let formattedCost = stringCost.map { String($0) + " " }
+        
+        return "\(formattedCost.joined(separator: " ")) ₽"
     }
 }
 
