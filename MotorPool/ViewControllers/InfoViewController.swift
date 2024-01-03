@@ -93,21 +93,29 @@ extension InfoViewController {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) as? FavoriteCarTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) 
+            as? FavoriteCarTableViewCell else { return UITableViewCell() }
             
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "totalCell", for: indexPath) as? TotalCarsTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "totalCell", for: indexPath) 
+            as? TotalCarsTableViewCell else { return UITableViewCell() }
             
             return cell
         case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell", for: indexPath) as? TotalPriceTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell", for: indexPath) 
+            as? TotalPriceTableViewCell else { return UITableViewCell() }
+            
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "fuelCell", for: indexPath)
+            as? FuelTableViewCell else { return UITableViewCell() }
             
             return cell
         default:
@@ -149,6 +157,11 @@ extension InfoViewController {
             priceCell?.priceRUB = priceInRUB()
             
             return priceCell
+        case 3:
+            let fuelCell = tableView.dequeueReusableCell(withIdentifier: "fuelCell")
+            as? FuelTableViewCell
+            
+            return fuelCell
         default:
             return UIView()
         }
@@ -165,6 +178,8 @@ extension InfoViewController {
             sectionSize = 130
         case 2:
             sectionSize = 80
+        case 3:
+            sectionSize = 250
         default:
             break
         }
