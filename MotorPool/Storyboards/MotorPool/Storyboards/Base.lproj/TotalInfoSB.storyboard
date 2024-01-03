@@ -382,8 +382,8 @@
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3l-zc-piZ">
-                                                            <rect key="frame" x="62.666666666666686" y="63.333333333333329" width="258" height="58.333333333333329"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i3l-zc-piZ">
+                                                            <rect key="frame" x="57.666666666666657" y="63.333333333333329" width="268" height="58.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price per" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="Vvy-63-DZE">
                                                                     <rect key="frame" x="0.0" y="16.999999999999993" width="77.666666666666671" height="24"/>
@@ -392,7 +392,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-O8-tpT">
-                                                                    <rect key="frame" x="82.666666666666671" y="11.999999999999993" width="60.000000000000014" height="34.333333333333336"/>
+                                                                    <rect key="frame" x="87.666666666666686" y="11.999999999999993" width="60" height="34.333333333333336"/>
                                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="the-Th-S1e"/>
@@ -401,7 +401,7 @@
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="liter gasoline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="aN2-7d-Lf6">
-                                                                    <rect key="frame" x="147.66666666666669" y="16.999999999999993" width="110.33333333333331" height="24"/>
+                                                                    <rect key="frame" x="157.66666666666669" y="16.999999999999993" width="110.33333333333331" height="24"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
