@@ -52,6 +52,7 @@ final class InfoViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: Properties
     var user: User!
     
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -141,6 +142,8 @@ extension InfoViewController {
             let priceCell = tableView.dequeueReusableCell(withIdentifier: "priceCell")
             as? TotalPriceTableViewCell
             
+            priceCell?.priceLabel.text = priceInUSD()
+            
             priceCell?.priceUSD = priceInUSD()
             priceCell?.priceEUR = priceInEUR()
             priceCell?.priceRUB = priceInRUB()
@@ -152,7 +155,21 @@ extension InfoViewController {
     }
         
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        150
+        
+        var sectionSize: CGFloat = 200
+        
+        switch section {
+        case 0:
+            sectionSize = 200
+        case 1:
+            sectionSize = 130
+        case 2:
+            sectionSize = 80
+        default:
+            break
+        }
+        
+        return sectionSize
     }
 }
 

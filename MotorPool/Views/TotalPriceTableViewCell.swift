@@ -9,6 +9,13 @@ import UIKit
 
 class TotalPriceTableViewCell: UITableViewCell {
 
+    @IBOutlet var priceSegmentedControl: UISegmentedControl! {
+        didSet {
+            priceSegmentedControl.selectedSegmentTintColor = .black
+            priceSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        }
+    }
+    
     @IBOutlet var priceLabel: UILabel!
     
     var priceUSD: String!
