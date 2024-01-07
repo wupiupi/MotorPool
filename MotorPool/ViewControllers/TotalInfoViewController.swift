@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TotalInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class TotalInfoViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet var tableView: UITableView!
@@ -86,14 +86,14 @@ final class TotalInfoViewController: UIViewController, UITableViewDataSource, UI
     }
 }
 
-// MARK: InfoViewControllerDataSource
-extension TotalInfoViewController {
+// MARK: UITableViewDataSource
+extension TotalInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        4
+        3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,19 +113,14 @@ extension TotalInfoViewController {
             as? TotalPriceTableViewCell else { return UITableViewCell() }
             
             return cell
-        case 3:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "fuelCell", for: indexPath)
-            as? FuelTableViewCell else { return UITableViewCell() }
-            
-            return cell
         default:
             return UITableViewCell()
         }
     }
 }
 
-// MARK: InfoViewControllerDelegate
-extension TotalInfoViewController {
+// MARK: UITableViewDelegate
+extension TotalInfoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -157,18 +152,12 @@ extension TotalInfoViewController {
             priceCell?.priceRUB = priceInRUB()
             
             return priceCell
-        case 3:
-            let fuelCell = tableView.dequeueReusableCell(withIdentifier: "fuelCell")
-            as? FuelTableViewCell
-            
-            return fuelCell
         default:
             return UIView()
         }
     }
         
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         var sectionSize: CGFloat = 200
         
         switch section {
@@ -178,19 +167,15 @@ extension TotalInfoViewController {
             sectionSize = 130
         case 2:
             sectionSize = 80
-        case 3:
-            sectionSize = 250
         default:
             break
         }
-        
         return sectionSize
     }
 }
 
 // MARK: Logic func
 private extension TotalInfoViewController {
-    
     func favoriteCar() -> String {
         var favoriteCars: [String: Int] = [:]
         let modelCars = user.autos.map { $0.model }
@@ -210,7 +195,6 @@ private extension TotalInfoViewController {
     }
     
     func priceInUSD() -> String {
-        
         var totalCost = 0.0
         user?.autos.forEach { totalCost += $0.price }
 
@@ -242,6 +226,7 @@ private extension TotalInfoViewController {
     func priceInRUB() -> String {
         var totalCost = 0.0
         user?.autos.forEach { totalCost += $0.price }
+        
         let totalRUB = totalCost * 90
 
         var stringCost = String(format: "%.3f", totalRUB)
@@ -263,14 +248,13 @@ private extension TotalInfoViewController {
         view.alpha = 0
         
         UIView.animate(withDuration: 1.5) {
-            self.visualEffectView.alpha = 1
+            self.visualEffectView.alpha = 0.85
             view.alpha = 1
             view.transform = CGAffineTransform.identity
         }
     }
     
     func animateOut(view: UIView) {
-        
         UIView.animate(withDuration: 1.0) {
             self.visualEffectView.alpha = 0
             view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)

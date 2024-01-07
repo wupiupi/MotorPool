@@ -11,7 +11,7 @@
 		46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */; };
 		46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */; };
 		46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */; };
-		46A1C1652B45C77F00BB4F7E /* FuelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1642B45C77F00BB4F7E /* FuelTableViewCell.swift */; };
+		46A1C1652B45C77F00BB4F7E /* FuelInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */; };
 		A04760362B35F8FE00CB740A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = A04760352B35F8FE00CB740A /* .gitattributes */; };
 		A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2C2B34191F00AFF55C /* AppDelegate.swift */; };
 		A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */; };
@@ -35,7 +35,7 @@
 		46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoViewController.swift; sourceTree = "<group>"; };
 		46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCarsTableViewCell.swift; sourceTree = "<group>"; };
 		46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPriceTableViewCell.swift; sourceTree = "<group>"; };
-		46A1C1642B45C77F00BB4F7E /* FuelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTableViewCell.swift; sourceTree = "<group>"; };
+		46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInfoViewController.swift; sourceTree = "<group>"; };
 		A04760352B35F8FE00CB740A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		A0624C292B34191F00AFF55C /* MotorPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0624C2C2B34191F00AFF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 		46A1C13F2B3E0CA400BB4F7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				46A1C1642B45C77F00BB4F7E /* FuelTableViewCell.swift */,
 				46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */,
 				46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */,
 				46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */,
@@ -128,6 +127,7 @@
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
 				46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */,
+				46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */,
-				46A1C1652B45C77F00BB4F7E /* FuelTableViewCell.swift in Sources */,
+				46A1C1652B45C77F00BB4F7E /* FuelInfoViewController.swift in Sources */,
 				46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */,
 				CD179CAF2B35931100BE4ADA /* LoginViewController.swift in Sources */,
 				46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */,
