@@ -7,8 +7,7 @@
 
 import UIKit
 
-class FavoriteCarTableViewCell: UITableViewCell {
-
+final class FavoriteCarTableViewCell: UITableViewCell {
     @IBOutlet var brandImageView: UIImageView!
     @IBOutlet var brandNameLabel: UILabel!
     @IBOutlet var brandTitleLabel: UILabel!

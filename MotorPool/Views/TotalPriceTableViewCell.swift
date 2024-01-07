@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TotalPriceTableViewCell: UITableViewCell {
+final class TotalPriceTableViewCell: UITableViewCell {
 
     @IBOutlet var priceSegmentedControl: UISegmentedControl! {
         didSet {
@@ -21,10 +21,6 @@ class TotalPriceTableViewCell: UITableViewCell {
     var priceUSD: String!
     var priceRUB: String!
     var priceEUR: String!
-                
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     @IBAction func priceSegmentedChangeValue(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {

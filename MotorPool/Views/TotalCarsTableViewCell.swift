@@ -8,14 +8,6 @@
 import UIKit
 
 final class TotalCarsTableViewCell: UITableViewCell {
-
     @IBOutlet var totalLabel: UILabel!
     @IBOutlet var carForTodayButton: UIButton!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-
-    
 }
