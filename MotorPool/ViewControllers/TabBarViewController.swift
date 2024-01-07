@@ -22,7 +22,7 @@ final class TabBarViewController: UITabBarController {
             if let navVC = viewController as? UINavigationController {
                 guard let autoList = navVC.topViewController as? AutoListViewController else { return }
                 autoList.user = user
-            } else if let totalInfoVC = viewController as? InfoViewController { // totalinfo
+            } else if let totalInfoVC = viewController as? TotalInfoViewController {
                 totalInfoVC.user = user
             }
         }

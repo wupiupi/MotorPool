@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */; };
-		46A1C13E2B3C886200BB4F7E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */; };
+		46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */; };
 		46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */; };
 		46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */; };
 		46A1C1652B45C77F00BB4F7E /* FuelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1642B45C77F00BB4F7E /* FuelTableViewCell.swift */; };
@@ -21,7 +21,6 @@
 		CD179CB42B3595C200BE4ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CB22B3595C200BE4ADA /* Main.storyboard */; };
 		CD179CB62B35979400BE4ADA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CB52B35979400BE4ADA /* TabBarViewController.swift */; };
 		CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */; };
-		CD179CBE2B359BF800BE4ADA /* TotalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */; };
 		CD179CCB2B35A32100BE4ADA /* AutoListSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CC92B35A32100BE4ADA /* AutoListSB.storyboard */; };
 		CD179CCE2B35A36400BE4ADA /* AboutSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CCC2B35A36400BE4ADA /* AboutSB.storyboard */; };
 		CD179CD12B35A3AB00BE4ADA /* TotalInfoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CCF2B35A3AB00BE4ADA /* TotalInfoSB.storyboard */; };
@@ -33,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarTableViewCell.swift; sourceTree = "<group>"; };
-		46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoViewController.swift; sourceTree = "<group>"; };
 		46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCarsTableViewCell.swift; sourceTree = "<group>"; };
 		46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPriceTableViewCell.swift; sourceTree = "<group>"; };
 		46A1C1642B45C77F00BB4F7E /* FuelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTableViewCell.swift; sourceTree = "<group>"; };
@@ -48,7 +47,6 @@
 		CD179CB32B3595C200BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD179CB52B35979400BE4ADA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoListViewController.swift; sourceTree = "<group>"; };
-		CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoViewController.swift; sourceTree = "<group>"; };
 		CD179CCA2B35A32100BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/AutoListSB.storyboard; sourceTree = "<group>"; };
 		CD179CCD2B35A36400BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/AboutSB.storyboard; sourceTree = "<group>"; };
 		CD179CD02B35A3AB00BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/TotalInfoSB.storyboard; sourceTree = "<group>"; };
@@ -129,8 +127,7 @@
 				CD179CB52B35979400BE4ADA /* TabBarViewController.swift */,
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
-				CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */,
-				46A1C13D2B3C886200BB4F7E /* InfoViewController.swift */,
+				46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -241,11 +238,10 @@
 			files = (
 				CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */,
 				46A1C1652B45C77F00BB4F7E /* FuelTableViewCell.swift in Sources */,
-				46A1C13E2B3C886200BB4F7E /* InfoViewController.swift in Sources */,
+				46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */,
 				CD179CAF2B35931100BE4ADA /* LoginViewController.swift in Sources */,
 				46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */,
 				CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */,
-				CD179CBE2B359BF800BE4ADA /* TotalInfoViewController.swift in Sources */,
 				CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */,
 				A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */,
 				46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */,

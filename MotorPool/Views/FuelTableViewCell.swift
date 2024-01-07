@@ -7,29 +7,28 @@
 
 import UIKit
 
-class FuelTableViewCell: UITableViewCell, UITextFieldDelegate {
+class FuelTableViewCell: UITableViewCell {
     
     @IBOutlet var fuelPriceTitleLabel: UILabel!
 
-    @IBOutlet var fuelCountTextField: UITextField!
+    @IBOutlet var fuelCountLabel: UILabel!
     @IBOutlet var unitGasolineLabel: UILabel!
     
     @IBOutlet var quantityFuelSlider: UISlider!
-    @IBOutlet var unitOfMeasureFuelSwitch: UISwitch!
+    @IBOutlet var unitOfMeasureFuelSwitch: UISwitch! {
+        didSet {
+            unitOfMeasureFuelSwitch.isOn = false
+        }
+    }
         
     override func awakeFromNib() {
         super.awakeFromNib()
-        fuelCountTextField.delegate = self
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        endEditing(true)
+        fuelPriceTitleLabel.text = calculateFuelPrice()
+        fuelCountLabel.text = calculateFuelPrice()
     }
     
     @IBAction func quantityFuelSliderMove() {
-        fuelCountTextField.text = string(from: quantityFuelSlider)
+        fuelCountLabel.text = string(from: quantityFuelSlider)
         fuelPriceTitleLabel.text = calculateFuelPrice()
     }
     
@@ -38,13 +37,21 @@ class FuelTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     private func calculateFuelPrice() -> String {
-        let fuelPrice = 1.3
-        let calculateFuel = (Double(string(from: quantityFuelSlider)) ?? 0) * fuelPrice
+        let literFuel = 1.3
         
-        return String(format: "%.1f $", calculateFuel)
+        if unitOfMeasureFuelSwitch.isOn {
+            unitGasolineLabel.text = "gallon's"
+            let gallonFuel = 3.8 * literFuel
+            let calculateFuel = (Double(string(from: quantityFuelSlider)) ?? 0) * gallonFuel
+            
+            return String(format: "%.1f $", calculateFuel)
+        } else {
+            unitGasolineLabel.text = "liter"
+            let calculateFuel = (Double(string(from: quantityFuelSlider)) ?? 0) * literFuel
+            
+            return String(format: "%.1f $", calculateFuel)
+        }
+        
+        
     }
-}
-
-extension UITextFieldDelegate {
-    
 }
