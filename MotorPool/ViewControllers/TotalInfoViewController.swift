@@ -1,46 +1,70 @@
 //
-//  TotalInfoViewController.swift
+//  InfoViewController.swift
 //  MotorPool
 //
-//  Created by Serge Bowski on 12/22/23.
+//  Created by Pavel Gribachev on 27.12.2023.
 //
 
 import UIKit
 
 final class TotalInfoViewController: UIViewController {
     
-    // MARK: Outlets
-    @IBOutlet var carCountLabel: UILabel!
-    @IBOutlet var carFavoriteLabel: UILabel!
-    @IBOutlet var carTotalCostLabel: UILabel!
-    @IBOutlet var carTotalFuelLabel: UILabel!
-    @IBOutlet var chooseRandomCarButton: UIButton!
+    // MARK: IBOutlets
+    @IBOutlet var tableView: UITableView!
     
-    @IBOutlet var customStackView: UIStackView!
-    @IBOutlet var customImageView: UIImageView!
-    @IBOutlet var customLabel: UILabel!
-    @IBOutlet var customButton: UIButton!
-    @IBOutlet var customView: UIView!
+    @IBOutlet var randomCarView: UIView! {
+        didSet {
+            randomCarView.center = view.center
+            randomCarView.layer.cornerRadius = 10
+            randomCarView.layer.borderWidth = 1
+            randomCarView.layer.borderColor = UIColor.black.cgColor
+        }
+    }
+    @IBOutlet var randomCarImageView: UIImageView! {
+        didSet {
+            randomCarImageView.layer.cornerRadius = 10
+        }
+    }
+    @IBOutlet var randomCarTitleLabel: UILabel! {
+        didSet {
+            randomCarTitleLabel.font = .boldSystemFont(ofSize: 18)
+        }
+    }
+    @IBOutlet var randomCarButton: UIButton! {
+        didSet {
+            randomCarButton.layer.cornerRadius = 5
+            randomCarButton.layer.borderWidth = 1
+            randomCarButton.backgroundColor = .black
+            randomCarButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+            randomCarButton.setTitleColor(.white, for: .normal)
+            randomCarButton.setTitle("GET STARTED 😈", for: .normal)
+        }
+    }
     
-    @IBOutlet var blurEffect: UIVisualEffectView!
-    
+    @IBOutlet var visualEffectView: UIVisualEffectView! {
+        didSet {
+            visualEffectView.center = view.center
+            visualEffectView.bounds = view.bounds
+            visualEffectView.backgroundColor = UIColor(patternImage: .back)
+        }
+    }
+        
     // MARK: Properties
     var user: User!
-    var effect: UIVisualEffect!
     
-    // MARK: ViewDidLoad
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
-    // MARK: Action
-    @IBAction func customButtonDidTapped() {
-        customStackView.isHidden = true
-        blurEffect.isHidden = true
+    // MARK: IBAction func
+    @IBAction func randomCarDidTapped() {
+        animateOut(view: randomCarView)
     }
     
-    @IBAction func chooseRandomCarDidTapped() {
+    @IBAction func carForTodayDidTapped() {
         var carDict: [String: String] = [:]
         
         let carModels = user.autos.map { $0.model }
@@ -51,101 +75,107 @@ final class TotalInfoViewController: UIViewController {
         }
 
         let randomCar = carDict.randomElement()
-        customStackView.isHidden = false
-        customImageView.image = UIImage(named: "\(randomCar?.key ?? "") \(randomCar?.value ?? "")")
-        customLabel.text = "\(randomCar?.key ?? "") \(randomCar?.value ?? "")"
         
-        blurEffect.layer.backgroundColor = UIColor(patternImage: .back).cgColor
-        animatedEffectFromView()
+        randomCarImageView.image = UIImage(named: "\(randomCar?.key ?? "") \(randomCar?.value ?? "")")
+        randomCarTitleLabel.text = "\(randomCar?.key ?? "") \(randomCar?.value ?? "")"
+        
+        view.addSubview(visualEffectView)
+        view.addSubview(randomCarView)
+        
+        animateIn(view: randomCarView)
     }
 }
 
+// MARK: UITableViewDataSource
+extension TotalInfoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) 
+            as? FavoriteCarTableViewCell else { return UITableViewCell() }
+            
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "totalCell", for: indexPath) 
+            as? TotalCarsTableViewCell else { return UITableViewCell() }
+            
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell", for: indexPath) 
+            as? TotalPriceTableViewCell else { return UITableViewCell() }
+            
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+}
+
+// MARK: UITableViewDelegate
+extension TotalInfoViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        switch section {
+        case 0:
+            let favoriteCar = favoriteCar()
+            let favoriteCell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell")
+            as? FavoriteCarTableViewCell
+        
+            favoriteCell?.brandImageView.image = UIImage(named: favoriteCar)
+            favoriteCell?.brandNameLabel.text = favoriteCar
+            
+            return favoriteCell
+        case 1:
+            let totalCell = tableView.dequeueReusableCell(withIdentifier: "totalCell")
+            as? TotalCarsTableViewCell
+    
+            totalCell?.totalLabel.text = totalCar()
+            
+            return totalCell
+        case 2:
+            let priceCell = tableView.dequeueReusableCell(withIdentifier: "priceCell")
+            as? TotalPriceTableViewCell
+            
+            priceCell?.priceLabel.text = priceInUSD()
+            
+            priceCell?.priceUSD = priceInUSD()
+            priceCell?.priceEUR = priceInEUR()
+            priceCell?.priceRUB = priceInRUB()
+            
+            return priceCell
+        default:
+            return UIView()
+        }
+    }
+        
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        var sectionSize: CGFloat = 200
+        
+        switch section {
+        case 0:
+            sectionSize = 200
+        case 1:
+            sectionSize = 130
+        case 2:
+            sectionSize = 80
+        default:
+            break
+        }
+        return sectionSize
+    }
+}
+
+// MARK: Logic func
 private extension TotalInfoViewController {
-    
-    // MARK: Update main UI
-    func updateUI() {
-        user.autos.forEach { auto in
-            carCountLabel.text = String(user.autos.count)
-            carFavoriteLabel.text = favoriteCar()
-            carTotalCostLabel.text = totalCost()
-            carTotalFuelLabel.text = totalFuel()
-        }
-        
-        // change button style "chooseRandomCar"
-        chooseRandomCarButton.layer.cornerRadius = 10
-        chooseRandomCarButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        chooseRandomCarButton.layer.borderWidth = 1
-        chooseRandomCarButton.layer.borderColor = UIColor.black.cgColor
-        
-        updateCustomView()
-        
-        effect = blurEffect.effect
-        blurEffect.isHidden = true
-    }
-    
-    // MARK: Update custom UI
-    func updateCustomView() {
-        
-        //custom stackView
-        customStackView.isHidden = true
-        
-        //custom imageView
-        customImageView.layer.cornerRadius = 10
-        
-        // custom view
-        customView.layer.cornerRadius = 10
-        customView.layer.borderWidth = 1
-        customView.layer.borderColor = UIColor.black.cgColor
-        
-        // custom button
-        customButton.layer.cornerRadius = 10
-        customButton.layer.borderWidth = 1
-        customButton.backgroundColor = .black
-        customButton.tintColor = .white
-        customButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        customButton.setTitle("GET STARTED 😈", for: .normal)
-        
-        // custom label
-        customLabel.font = .systemFont(ofSize: 25)
-    }
-    
-    func animatedEffectFromView() {
-        self.blurEffect.isHidden = false
-        view.addSubview(customStackView)
-        customStackView.center = view.center
-        
-        customView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        customView.alpha = 0
-        
-        UIView.animate(withDuration: 1.5) {
-            self.blurEffect.effect = self.effect
-            self.customView.alpha = 1
-            self.customView.transform = CGAffineTransform.identity
-        }
-    }
-    
-    // MARK: Calculating the total price of cars
-    func totalCost() -> String {
-        var totalCost = 0.0
-        user.autos.forEach { totalCost += $0.price }
-        
-        var stringCost = String(format: "%.3f", totalCost)
-        if totalCost > 1000 {
-            stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
-        }
-        
-        return "\(stringCost) $"
-    }
-    
-    // MARK: Counting the total amount of fuel
-    func totalFuel() -> String {
-        var totalFuel = 0.0
-        user.autos.forEach { totalFuel += $0.fuelConsumption }
-        
-        return String(format: "%.1f l/100 km" , totalFuel)
-    }
-    
-    // MARK: Identifying the most frequently encountered vehicle
     func favoriteCar() -> String {
         var favoriteCars: [String: Int] = [:]
         let modelCars = user.autos.map { $0.model }
@@ -158,5 +188,80 @@ private extension TotalInfoViewController {
         guard let mostFavoriteCar = sortedFavoriteCars.first?.key else { return "" }
         
         return mostFavoriteCar
+    }
+    
+    func totalCar() -> String {
+        return String(user.autos.count)
+    }
+    
+    func priceInUSD() -> String {
+        var totalCost = 0.0
+        user?.autos.forEach { totalCost += $0.price }
+
+        var stringCost = String(format: "%.3f", totalCost)
+        if totalCost > 1000 {
+            stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
+        }
+        
+        let formattedCost = stringCost.map { String($0) + " " }
+        
+        return "\(formattedCost.joined(separator: " ")) $"
+    }
+    
+    func priceInEUR() -> String {
+        var totalCost = 0.0
+        user?.autos.forEach { totalCost += $0.price }
+        let totalEUR = totalCost * 1.2
+
+        var stringCost = String(format: "%.3f", totalEUR)
+        if totalCost > 1000 {
+            stringCost.insert(".", at: stringCost.index(after: stringCost.startIndex))
+        }
+        
+        let formattedCost = stringCost.map { String($0) + " " }
+        
+        return "\(formattedCost.joined(separator: " ")) €"
+    }
+    
+    func priceInRUB() -> String {
+        var totalCost = 0.0
+        user?.autos.forEach { totalCost += $0.price }
+        
+        let totalRUB = totalCost * 90
+
+        var stringCost = String(format: "%.3f", totalRUB)
+        if totalCost > 1000 {
+            stringCost.insert(".", at: stringCost.index(stringCost.startIndex, offsetBy: 3))
+        }
+        
+        let formattedCost = stringCost.map { String($0) + " " }
+        
+        return "\(formattedCost.joined(separator: " ")) ₽"
+    }
+}
+
+// MARK: Animate func
+private extension TotalInfoViewController {
+    func animateIn(view: UIView) {
+        view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        visualEffectView.alpha = 0
+        view.alpha = 0
+        
+        UIView.animate(withDuration: 1.5) {
+            self.visualEffectView.alpha = 0.85
+            view.alpha = 1
+            view.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func animateOut(view: UIView) {
+        UIView.animate(withDuration: 1.0) {
+            self.visualEffectView.alpha = 0
+            view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            view.alpha = 0
+        } completion: { _ in
+            self.visualEffectView.removeFromSuperview()
+            view.removeFromSuperview()
+        }
     }
 }
