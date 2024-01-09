@@ -17,6 +17,8 @@ final class AutoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "back"))
     }
     
     // MARK: - Navigation
@@ -41,10 +43,13 @@ extension AutoListViewController {
         
         var content = cell.defaultContentConfiguration()
         content.text = auto.brand
+        content.textProperties.color = .systemGray6
         content.secondaryText = auto.model
+        content.secondaryTextProperties.color = .systemGray4
         content.image = UIImage(named: auto.model + " " + auto.brand)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
+        cell.backgroundColor = .clear
         cell.contentConfiguration = content
         return cell
     }

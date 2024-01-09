@@ -9,12 +9,13 @@ import UIKit
 
 final class TabBarViewController: UITabBarController {
     var user: User!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setTabBarItems()
         fetchData()
+        setBlurredBarItems()
     }
     
     private func fetchData() {
@@ -50,5 +51,17 @@ final class TabBarViewController: UITabBarController {
                 )
             }
         }
+    }
+    
+    private func setBlurredBarItems() {
+        tabBar.barTintColor = .clear
+        tabBar.backgroundImage = UIImage()
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = view.bounds
+        blurView.autoresizingMask = .flexibleWidth
+        
+        tabBar.insertSubview(blurView, at: 0)
     }
 }
