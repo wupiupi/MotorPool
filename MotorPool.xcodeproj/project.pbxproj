@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */; };
+		46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */; };
+		46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */; };
+		46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */; };
+		46A1C1652B45C77F00BB4F7E /* FuelInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */; };
 		A04760362B35F8FE00CB740A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = A04760352B35F8FE00CB740A /* .gitattributes */; };
 		A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2C2B34191F00AFF55C /* AppDelegate.swift */; };
 		A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */; };
@@ -16,7 +21,6 @@
 		CD179CB42B3595C200BE4ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CB22B3595C200BE4ADA /* Main.storyboard */; };
 		CD179CB62B35979400BE4ADA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CB52B35979400BE4ADA /* TabBarViewController.swift */; };
 		CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */; };
-		CD179CBE2B359BF800BE4ADA /* TotalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */; };
 		CD179CCB2B35A32100BE4ADA /* AutoListSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CC92B35A32100BE4ADA /* AutoListSB.storyboard */; };
 		CD179CCE2B35A36400BE4ADA /* AboutSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CCC2B35A36400BE4ADA /* AboutSB.storyboard */; };
 		CD179CD12B35A3AB00BE4ADA /* TotalInfoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD179CCF2B35A3AB00BE4ADA /* TotalInfoSB.storyboard */; };
@@ -28,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarTableViewCell.swift; sourceTree = "<group>"; };
+		46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoViewController.swift; sourceTree = "<group>"; };
+		46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCarsTableViewCell.swift; sourceTree = "<group>"; };
+		46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPriceTableViewCell.swift; sourceTree = "<group>"; };
+		46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInfoViewController.swift; sourceTree = "<group>"; };
 		A04760352B35F8FE00CB740A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		A0624C292B34191F00AFF55C /* MotorPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0624C2C2B34191F00AFF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +48,6 @@
 		CD179CB32B3595C200BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD179CB52B35979400BE4ADA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoListViewController.swift; sourceTree = "<group>"; };
-		CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoViewController.swift; sourceTree = "<group>"; };
 		CD179CCA2B35A32100BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/AutoListSB.storyboard; sourceTree = "<group>"; };
 		CD179CCD2B35A36400BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/AboutSB.storyboard; sourceTree = "<group>"; };
 		CD179CD02B35A3AB00BE4ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MotorPool/Storyboards/Base.lproj/TotalInfoSB.storyboard; sourceTree = "<group>"; };
@@ -61,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46A1C13F2B3E0CA400BB4F7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */,
+				46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */,
+				46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A0624C202B34191F00AFF55C = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +102,7 @@
 			children = (
 				A0624C412B34195D00AFF55C /* ViewControllers */,
 				A0624C422B34196A00AFF55C /* Storyboards */,
+				46A1C13F2B3E0CA400BB4F7E /* Views */,
 				CD375F272B3449E200A6285F /* Models */,
 				CD9E7A2E2B343B4C00A375EE /* Services */,
 				A0624C402B34193500AFF55C /* Supporting */,
@@ -109,7 +128,8 @@
 				CD179CB52B35979400BE4ADA /* TabBarViewController.swift */,
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
-				CD179CBD2B359BF800BE4ADA /* TotalInfoViewController.swift */,
+				46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */,
+				46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,14 +239,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */,
+				46A1C1652B45C77F00BB4F7E /* FuelInfoViewController.swift in Sources */,
+				46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */,
 				CD179CAF2B35931100BE4ADA /* LoginViewController.swift in Sources */,
+				46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */,
 				CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */,
-				CD179CBE2B359BF800BE4ADA /* TotalInfoViewController.swift in Sources */,
 				CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */,
 				A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */,
+				46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */,
 				CD179CB62B35979400BE4ADA /* TabBarViewController.swift in Sources */,
 				CD375F292B344A1E00A6285F /* User.swift in Sources */,
 				A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */,
+				46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KSKFLS4ZH5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotorPool/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -433,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KSKFLS4ZH5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotorPool/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
