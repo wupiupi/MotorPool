@@ -57,6 +57,8 @@ final class TotalInfoViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "back"))
     }
     
     // MARK: IBAction func

@@ -28,7 +28,9 @@ final class FuelInfoViewController: UIViewController {
             fuelSwitch.isOn = false
         }
     }
-     
+    
+    @IBOutlet weak var backView: UIView!
+    
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ final class FuelInfoViewController: UIViewController {
         fuelCountTextField.text = string(from: fuelCountSlider)
         
         fuelCountTextField.delegate = self
+        overlayBlurredBackgroundView()
     }
     
     // MARK: touchesBegan
@@ -56,6 +59,10 @@ final class FuelInfoViewController: UIViewController {
     @IBAction func didChangeValueSwitch() {
         fuelPriceLabel.text = calculateFuelPrice()
         fuelCountTextField.text = string(from: fuelCountSlider)
+    }
+    
+    @IBAction private func doneButtonDidTapped() {
+        dismiss(animated: true)
     }
 }
 
@@ -104,6 +111,16 @@ private extension FuelInfoViewController {
          } else {
            return false
          }
+    }
+    
+    func overlayBlurredBackgroundView() {
+        let blurredBackgroundView = UIVisualEffectView()
+        
+        blurredBackgroundView.frame = view.frame
+        blurredBackgroundView.effect = UIBlurEffect(style: .dark)
+        
+        backView.addSubview(blurredBackgroundView)
+        view.backgroundColor = .clear
     }
 }
 

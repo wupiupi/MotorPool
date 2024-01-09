@@ -127,7 +127,9 @@
         <scene sceneID="Nf8-dU-vcB">
             <objects>
                 <viewControllerPlaceholder storyboardName="AutoListSB" id="ZSQ-Do-EjE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Auto" image="car" catalog="system" id="kdj-VK-93p"/>
+                    <tabBarItem key="tabBarItem" title="Auto" image="car" catalog="system" id="kdj-VK-93p">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLt-M9-nBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +139,9 @@
         <scene sceneID="4Zl-Kn-3iT">
             <objects>
                 <viewControllerPlaceholder storyboardName="TotalInfoSB" id="6Ad-nE-37K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Total" image="info" catalog="system" id="Ukc-fK-8l6"/>
+                    <tabBarItem key="tabBarItem" title="Total" image="info" catalog="system" id="Ukc-fK-8l6">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYY-gS-WcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +151,9 @@
         <scene sceneID="Uhf-oM-rm7">
             <objects>
                 <viewControllerPlaceholder storyboardName="AboutSB" id="Kqm-MB-CMp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="person.2.fill" catalog="system" id="Tya-MN-Ktp"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="person.2.fill" catalog="system" id="Tya-MN-Ktp">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8c-fO-Npp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

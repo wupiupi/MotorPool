@@ -19,6 +19,8 @@ final class AutoListViewController: UITableViewController {
         tableView.rowHeight = 80
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "back"))
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
     }
     
     // MARK: - Navigation

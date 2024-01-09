@@ -57,6 +57,11 @@ final class LoginViewController: UIViewController {
         alert(with: "Oops!", and: "Your password is \(user.password) 😉")
     }
     
+    @IBAction private func unwind(for segue: UIStoryboardSegue) {
+        passwordTextField.text = ""
+        usernameTextField.text = ""
+    }
+    
     // MARK: - Private Methods
 
     private func alert(

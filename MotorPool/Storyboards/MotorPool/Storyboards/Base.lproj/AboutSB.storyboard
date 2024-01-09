@@ -26,12 +26,32 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="build 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBD-Mw-CQf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="build 1.1.18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBD-Mw-CQf">
                                 <rect key="frame" x="20" y="179.66666666666666" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2b-Qs-RQd">
+                                <rect key="frame" x="20" y="218" width="77" height="34"/>
+                                <color key="backgroundColor" red="0.48235297199999999" green="0.31372550129999999" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="77" id="Lip-O4-NaZ"/>
+                                    <constraint firstAttribute="height" constant="34" id="YFN-ys-5G8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="log out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Wv2-in-eMt" kind="unwind" unwindAction="unwindFor:" id="hyO-Fs-Gtk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O0B-NK-fin"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -42,6 +62,8 @@
                             <constraint firstItem="PSM-0z-Whc" firstAttribute="trailing" secondItem="O0B-NK-fin" secondAttribute="trailing" id="OUH-7F-KxK"/>
                             <constraint firstAttribute="trailing" secondItem="UUZ-S2-2cT" secondAttribute="trailing" constant="20" id="RVU-XP-21W"/>
                             <constraint firstItem="UUZ-S2-2cT" firstAttribute="leading" secondItem="O0B-NK-fin" secondAttribute="leading" constant="20" id="YEp-gF-H4q"/>
+                            <constraint firstItem="U2b-Qs-RQd" firstAttribute="top" secondItem="GBD-Mw-CQf" secondAttribute="bottom" constant="17.329999999999998" id="bps-Y9-V2o"/>
+                            <constraint firstItem="U2b-Qs-RQd" firstAttribute="leading" secondItem="O0B-NK-fin" secondAttribute="leading" constant="20" id="e2h-rR-5J3"/>
                             <constraint firstItem="PSM-0z-Whc" firstAttribute="leading" secondItem="O0B-NK-fin" secondAttribute="leading" id="g9w-hh-M0P"/>
                             <constraint firstItem="PSM-0z-Whc" firstAttribute="top" secondItem="USK-8U-wtw" secondAttribute="top" id="gqG-Mz-oln"/>
                             <constraint firstItem="UUZ-S2-2cT" firstAttribute="top" secondItem="O0B-NK-fin" secondAttribute="top" constant="60" id="ssx-ng-var"/>
@@ -51,6 +73,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="mya-RJ-am1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5k-Gr-aRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Wv2-in-eMt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1817.5572519083969" y="798.59154929577471"/>
         </scene>

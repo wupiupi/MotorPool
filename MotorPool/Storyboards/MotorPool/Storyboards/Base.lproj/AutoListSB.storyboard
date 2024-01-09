@@ -14,10 +14,20 @@
             <objects>
                 <navigationController id="vCP-eL-tPR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Cuc-IQ-OiZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wD2-T2-JwL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="wD2-T2-JwL">
                         <rect key="frame" x="0.0" y="50" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SmH-6Y-nsR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="SUA-Su-fSa" kind="relationship" relationship="rootViewController" id="Cks-yb-GvN"/>
                     </connections>
