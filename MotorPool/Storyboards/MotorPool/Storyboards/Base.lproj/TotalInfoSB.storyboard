@@ -17,13 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-g3-HVR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="0eU-XU-727">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-g3-HVR">
+                                <rect key="frame" x="0.0" y="99" width="393" height="753"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="135" id="zya-g3-7AQ" customClass="FavoriteCarTableViewCell" customModule="MotorPool" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="135"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="135" id="zya-g3-7AQ" customClass="FavoriteCarTableViewCell" customModule="MotorPool" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zya-g3-7AQ" id="Spz-o0-ZDb">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
@@ -78,8 +81,8 @@
                                             <outlet property="brandTitleLabel" destination="cRI-gv-JJi" id="4ok-AF-9h6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="totalCell" rowHeight="135" id="eUU-ZL-pOK" customClass="TotalCarsTableViewCell" customModule="MotorPool" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="185" width="393" height="135"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="totalCell" rowHeight="135" id="eUU-ZL-pOK" customClass="TotalCarsTableViewCell" customModule="MotorPool" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="190.33333206176758" width="393" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUU-ZL-pOK" id="TRU-kG-qGh">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
@@ -136,8 +139,8 @@
                                             <outlet property="totalLabel" destination="4Kz-bm-Kcn" id="KFI-cr-ozo"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="priceCell" rowHeight="135" id="dyX-7w-nwG" customClass="TotalPriceTableViewCell" customModule="MotorPool" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="320" width="393" height="135"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="priceCell" rowHeight="135" id="dyX-7w-nwG" customClass="TotalPriceTableViewCell" customModule="MotorPool" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="325.33333206176758" width="393" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dyX-7w-nwG" id="itB-qb-TAE">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
@@ -206,7 +209,11 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0g3-ib-ZP6">
-                                <rect key="frame" x="5" y="59" width="388" height="96"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eRn-Hs-c7Q"/>
+                                </constraints>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="Mib-Dm-WnB">
                                         <barButtonItem key="rightBarButtonItem" title="Fuel" image="fuelpump" catalog="system" id="ezR-Nt-S9P">
@@ -217,20 +224,29 @@
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
-                                <navigationBarAppearance key="standardAppearance"/>
+                                <navigationBarAppearance key="standardAppearance">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </navigationBarAppearance>
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zaY-pN-ueS"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zaY-pN-ueS" firstAttribute="trailing" secondItem="0eU-XU-727" secondAttribute="trailing" id="0Vc-0v-BWD"/>
+                            <constraint firstItem="0eU-XU-727" firstAttribute="top" secondItem="Uyv-vk-vSZ" secondAttribute="top" id="2j3-Ow-jVP"/>
+                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="top" secondItem="zaY-pN-ueS" secondAttribute="top" id="3Ex-20-doO"/>
                             <constraint firstItem="Kt0-g3-HVR" firstAttribute="trailing" secondItem="Uyv-vk-vSZ" secondAttribute="trailing" id="7aF-jF-3zU"/>
-                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="leading" secondItem="zaY-pN-ueS" secondAttribute="leading" constant="5" id="BOO-eF-xAq"/>
+                            <constraint firstAttribute="bottom" secondItem="0eU-XU-727" secondAttribute="bottom" id="Ar4-Gf-PZc"/>
                             <constraint firstItem="Kt0-g3-HVR" firstAttribute="leading" secondItem="Uyv-vk-vSZ" secondAttribute="leading" id="Hq7-no-sVf"/>
-                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="top" secondItem="zaY-pN-ueS" secondAttribute="top" id="Qhi-eh-GxG"/>
+                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="trailing" secondItem="zaY-pN-ueS" secondAttribute="trailing" id="IhB-Hw-XsY"/>
+                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="leading" secondItem="zaY-pN-ueS" secondAttribute="leading" id="J98-28-ZLF"/>
+                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="leading" secondItem="zaY-pN-ueS" secondAttribute="leading" id="PAP-Ej-iPq"/>
+                            <constraint firstAttribute="bottom" secondItem="Kt0-g3-HVR" secondAttribute="bottom" id="PCE-DJ-4nm"/>
                             <constraint firstItem="Kt0-g3-HVR" firstAttribute="trailing" secondItem="Uyv-vk-vSZ" secondAttribute="trailing" id="RRF-Tl-85Y"/>
-                            <constraint firstItem="Kt0-g3-HVR" firstAttribute="top" secondItem="Uyv-vk-vSZ" secondAttribute="top" id="YTQ-gk-DbA"/>
-                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="trailing" secondItem="zaY-pN-ueS" secondAttribute="trailing" id="gNc-Ye-xBb"/>
-                            <constraint firstAttribute="bottom" secondItem="Kt0-g3-HVR" secondAttribute="bottom" id="mwq-Lc-cpE"/>
+                            <constraint firstItem="0eU-XU-727" firstAttribute="leading" secondItem="zaY-pN-ueS" secondAttribute="leading" id="WKZ-JV-gJD"/>
+                            <constraint firstItem="0g3-ib-ZP6" firstAttribute="trailing" secondItem="zaY-pN-ueS" secondAttribute="trailing" id="Zuo-KK-YW5"/>
+                            <constraint firstItem="Kt0-g3-HVR" firstAttribute="top" secondItem="0g3-ib-ZP6" secondAttribute="bottom" id="e7H-MH-OZp"/>
                             <constraint firstItem="Kt0-g3-HVR" firstAttribute="leading" secondItem="Uyv-vk-vSZ" secondAttribute="leading" id="opD-qi-P8W"/>
                         </constraints>
                     </view>
@@ -238,6 +254,7 @@
                     <navigationItem key="navigationItem" id="72B-AI-a53"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="navigationBar" destination="0g3-ib-ZP6" id="EAS-wM-G8R"/>
                         <outlet property="randomCarButton" destination="dat-iy-yu3" id="6xa-MU-zgx"/>
                         <outlet property="randomCarImageView" destination="fqM-5z-Qka" id="kMz-qJ-ma1"/>
                         <outlet property="randomCarTitleLabel" destination="iDQ-nW-cpF" id="ye9-8I-bqt"/>
@@ -447,14 +464,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="1680" height="1050"/>
         <image name="fuelpump" catalog="system" width="128" height="122"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

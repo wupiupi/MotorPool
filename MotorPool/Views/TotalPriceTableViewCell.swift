@@ -16,7 +16,11 @@ final class TotalPriceTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel! {
+        didSet {
+            priceLabel.textColor = .white
+        }
+    }
     
     var priceUSD: String!
     var priceRUB: String!

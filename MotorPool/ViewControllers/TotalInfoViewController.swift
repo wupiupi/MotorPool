@@ -48,7 +48,10 @@ final class TotalInfoViewController: UIViewController {
             visualEffectView.backgroundColor = UIColor(patternImage: .back)
         }
     }
-        
+    
+    @IBOutlet var navigationBar: UINavigationBar!
+    private let removeBackgroundNavBar = UINavigationBarAppearance()
+
     // MARK: Properties
     var user: User!
     
@@ -58,7 +61,10 @@ final class TotalInfoViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.backgroundView = UIImageView(image: UIImage(named: "back"))
+        view.backgroundColor = .red
+        
+        removeBackgroundNavBar.configureWithTransparentBackground()
+        navigationBar.standardAppearance = removeBackgroundNavBar
     }
     
     // MARK: IBAction func
