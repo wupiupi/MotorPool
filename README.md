@@ -5,4 +5,4 @@
 
 
 
-_by wupiupi & ice43_
+_by wupiupi, ice43 & Pavel Gribachev_
