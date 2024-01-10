@@ -50,7 +50,7 @@ final class TotalInfoViewController: UIViewController {
     }
     
     @IBOutlet var navigationBar: UINavigationBar!
-    private let removeBackgroundNavBar = UINavigationBarAppearance()
+    private let totalInfoNavigationBar = UINavigationBarAppearance()
 
     // MARK: Properties
     var user: User!
@@ -63,8 +63,8 @@ final class TotalInfoViewController: UIViewController {
         
         view.backgroundColor = .red
         
-        removeBackgroundNavBar.configureWithTransparentBackground()
-        navigationBar.standardAppearance = removeBackgroundNavBar
+        totalInfoNavigationBar.configureWithTransparentBackground()
+        navigationBar.standardAppearance = totalInfoNavigationBar
     }
     
     // MARK: IBAction func
