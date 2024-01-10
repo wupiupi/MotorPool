@@ -433,6 +433,13 @@
                                     <action selector="doneButtonDidTapped" destination="5yg-3I-tDf" eventType="touchUpInside" id="9R5-iP-hyQ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collapse_desh" translatesAutoresizingMaskIntoConstraints="NO" id="SfO-fd-zjq">
+                                <rect key="frame" x="127" y="20" width="139" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="atW-yp-1iR"/>
+                                    <constraint firstAttribute="width" constant="139" id="jX8-7z-Cze"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C4i-Vo-Hub"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -440,6 +447,8 @@
                             <constraint firstAttribute="top" secondItem="UeD-Qd-nnw" secondAttribute="bottom" id="2nh-ci-QqX"/>
                             <constraint firstItem="UeD-Qd-nnw" firstAttribute="leading" secondItem="BHG-Hi-rCF" secondAttribute="leading" id="2uV-23-wQY"/>
                             <constraint firstItem="C4i-Vo-Hub" firstAttribute="trailing" secondItem="vKr-oT-wPk" secondAttribute="trailing" constant="16" id="Due-lu-Kae"/>
+                            <constraint firstItem="SfO-fd-zjq" firstAttribute="top" secondItem="UeD-Qd-nnw" secondAttribute="bottom" constant="20" id="Mj4-qz-jMU"/>
+                            <constraint firstItem="SfO-fd-zjq" firstAttribute="centerX" secondItem="BHG-Hi-rCF" secondAttribute="centerX" id="PG9-Aa-1M0"/>
                             <constraint firstItem="C4i-Vo-Hub" firstAttribute="bottom" secondItem="Rhk-Jw-tBe" secondAttribute="bottom" multiplier="16:10" id="ZCH-4F-gwd"/>
                             <constraint firstAttribute="trailing" secondItem="UeD-Qd-nnw" secondAttribute="trailing" id="aqM-XF-UhU"/>
                             <constraint firstItem="C4i-Vo-Hub" firstAttribute="trailing" secondItem="Rhk-Jw-tBe" secondAttribute="trailing" constant="16" id="arL-7f-sTl"/>
@@ -465,6 +474,7 @@
     </scenes>
     <resources>
         <image name="back" width="1680" height="1050"/>
+        <image name="collapse_desh" width="512" height="512"/>
         <image name="fuelpump" catalog="system" width="128" height="122"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
