@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="fWb-G6-8hV">
             <objects>
-                <navigationController id="vCP-eL-tPR" sceneMemberID="viewController">
+                <navigationController id="vCP-eL-tPR" customClass="FirstNavigationViewController" customModule="MotorPool" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Cuc-IQ-OiZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="wD2-T2-JwL">
                         <rect key="frame" x="0.0" y="50" width="375" height="96"/>

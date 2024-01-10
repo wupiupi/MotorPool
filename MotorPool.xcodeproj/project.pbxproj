@@ -12,7 +12,6 @@
 		46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */; };
 		46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */; };
 		46A1C1652B45C77F00BB4F7E /* FuelInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */; };
-		A04760362B35F8FE00CB740A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = A04760352B35F8FE00CB740A /* .gitattributes */; };
 		A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2C2B34191F00AFF55C /* AppDelegate.swift */; };
 		A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */; };
 		A0624C362B34192000AFF55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0624C352B34192000AFF55C /* Assets.xcassets */; };
@@ -27,6 +26,7 @@
 		CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */; };
 		CD375F292B344A1E00A6285F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD375F282B344A1E00A6285F /* User.swift */; };
 		CD69C0862B35F67D00AFD8F9 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = CD69C0852B35F67D00AFD8F9 /* .gitattributes */; };
+		CD8B58982B4E9E470039CFAB /* FirstNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */; };
 		CD9E7A2A2B342BC700A375EE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CD9E7A292B342BC700A375EE /* .gitignore */; };
 		CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E7A302B343B7400A375EE /* DataStore.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,6 @@
 		46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCarsTableViewCell.swift; sourceTree = "<group>"; };
 		46A1C1422B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPriceTableViewCell.swift; sourceTree = "<group>"; };
 		46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInfoViewController.swift; sourceTree = "<group>"; };
-		A04760352B35F8FE00CB740A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		A0624C292B34191F00AFF55C /* MotorPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0624C2C2B34191F00AFF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0624C2E2B34191F00AFF55C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CD375F282B344A1E00A6285F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CD69C0852B35F67D00AFD8F9 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNavigationViewController.swift; sourceTree = "<group>"; };
 		CD9E7A292B342BC700A375EE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CD9E7A302B343B7400A375EE /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +130,7 @@
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
 				46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */,
 				46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */,
+				CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -251,6 +252,7 @@
 				CD375F292B344A1E00A6285F /* User.swift in Sources */,
 				A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */,
 				46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */,
+				CD8B58982B4E9E470039CFAB /* FirstNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
