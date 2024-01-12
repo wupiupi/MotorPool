@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		469915CF2B4ED6A300026A7F /* quizAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469915CE2B4ED6A300026A7F /* quizAuto.swift */; };
+		469915D52B517FFF00026A7F /* EXPQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469915D42B517FFF00026A7F /* EXPQuestionViewController.swift */; };
 		46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */; };
 		46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */; };
 		46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		469915CE2B4ED6A300026A7F /* quizAuto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizAuto.swift; sourceTree = "<group>"; };
+		469915D42B517FFF00026A7F /* EXPQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPQuestionViewController.swift; sourceTree = "<group>"; };
 		46A1C13B2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarTableViewCell.swift; sourceTree = "<group>"; };
 		46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoViewController.swift; sourceTree = "<group>"; };
 		46A1C1402B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCarsTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */,
 				46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */,
 				CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */,
+				469915D42B517FFF00026A7F /* EXPQuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				CD375F282B344A1E00A6285F /* User.swift */,
+				469915CE2B4ED6A300026A7F /* quizAuto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469915CF2B4ED6A300026A7F /* quizAuto.swift in Sources */,
 				CD179CB82B35997F00BE4ADA /* AutoListViewController.swift in Sources */,
 				46A1C1652B45C77F00BB4F7E /* FuelInfoViewController.swift in Sources */,
 				46A1C13E2B3C886200BB4F7E /* TotalInfoViewController.swift in Sources */,
@@ -246,6 +253,7 @@
 				46A1C13C2B3C815C00BB4F7E /* FavoriteCarTableViewCell.swift in Sources */,
 				CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */,
 				CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */,
+				469915D52B517FFF00026A7F /* EXPQuestionViewController.swift in Sources */,
 				A0624C2D2B34191F00AFF55C /* AppDelegate.swift in Sources */,
 				46A1C1432B3EF2B000BB4F7E /* TotalPriceTableViewCell.swift in Sources */,
 				CD179CB62B35979400BE4ADA /* TabBarViewController.swift in Sources */,
