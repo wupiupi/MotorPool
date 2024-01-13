@@ -12,16 +12,16 @@ struct Question {
     let title: String
     let answers: [Answer]
     
-    static func getQuestion() -> [Question] {
+    static func getQuestionRU() -> [Question] {
         [
             Question(
                 title: "Ваша комфортная скорость",
                 answers: [
-                    Answer(title: "50 km/h", car: .lada),
-                    Answer(title: "70 km/h", car: .toyota),
-                    Answer(title: "90 km/h", car: .mercedes),
-                    Answer(title: "110 km/h", car: .mercedes),
-                    Answer(title: ">130 km/h", car: .bmw)
+                    Answer(title: "50 км/ч", car: .lada),
+                    Answer(title: "70 км/ч", car: .toyota),
+                    Answer(title: "90 км/ч", car: .mercedes),
+                    Answer(title: "110 км/ч", car: .mercedes),
+                    Answer(title: ">130 км/ч", car: .bmw)
                 ]
             ),
             
@@ -83,11 +83,11 @@ struct Question {
             Question(
                 title: "На сколько часто вы готовы обслуживать машину",
                 answers: [
-                    Answer(title: "6.000 km", car: .bmw),
-                    Answer(title: "8.000 km", car: .mercedes),
-                    Answer(title: "10.000 km", car: .ford),
-                    Answer(title: "15.000 km", car: .lada),
-                    Answer(title: ">20.000 km", car: .toyota)
+                    Answer(title: "6.000 км", car: .bmw),
+                    Answer(title: "8.000 км", car: .mercedes),
+                    Answer(title: "10.000 км", car: .ford),
+                    Answer(title: "15.000 км", car: .lada),
+                    Answer(title: ">20.000 км", car: .toyota)
                 ]
             ),
             
@@ -103,7 +103,7 @@ struct Question {
             ),
             
             Question(
-                title: "По ощущениям, какого объема ДВС вам бы хватило (хотелось) в данный момент:",
+                title: "По ощущениям, какого объема ДВС вам бы хватило (хотелось) в данный момент",
                 answers: [
                     Answer(title: "2.0 (150 л/с)", car: .lada),
                     Answer(title: "2.5 (200 л/с)", car: .toyota),
@@ -114,19 +114,115 @@ struct Question {
             ),
         ]
     }
+    
+    static func getQuestionENG() -> [Question] {
+        [
+            Question(
+                title: "Your comfortable speed",
+                answers: [
+                    Answer(title: "30 mph", car: .lada),
+                    Answer(title: "45 mph", car: .toyota),
+                    Answer(title: "60 mph", car: .mercedes),
+                    Answer(title: "80 mph", car: .mercedes),
+                    Answer(title: ">100 mph", car: .bmw)
+                ]
+            ),
+            
+            Question(
+                title: "Your driving style",
+                answers: [
+                    Answer(title: "Calm", car: .toyota),
+                    Answer(title: "Aggressive", car: .bmw),
+                    Answer(title: "Polite", car: .ford),
+                    Answer(title: "Brawler", car: .mercedes),
+                    Answer(title: "Brake", car: .lada)
+                ]
+            ),
+            
+            Question(
+                title: "Biggest fear on the road",
+                answers: [
+                    Answer(title: "The engine will run out of oil", car: .bmw),
+                    Answer(title: "Flat tire", car: .ford),
+                    Answer(title: "Will skid", car: .toyota),
+                    Answer(title: "Showdown", car: .lada),
+                    Answer(title: "Any error on BC", car: .mercedes)
+                ]
+            ),
+            
+            Question(
+                title: "Which racing movie did you like best",
+                answers: [
+                    Answer(title: "Gran Turismo (2023)", car: .mercedes),
+                    Answer(title: "Ford vs Ferrari (2019)", car: .ford),
+                    Answer(title: "Fast and Furious (2015)", car: .bmw),
+                    Answer(title: "Drive (2011)", car: .toyota),
+                    Answer(title: "Taxi (1998)", car: .lada)
+                ]
+            ),
+            
+            Question(
+                title: "Which racer will you choose",
+                answers: [
+                    Answer(title: "Max Verstappen", car: .ford),
+                    Answer(title: "Sebastian Vettel", car: .toyota),
+                    Answer(title: "Lewis Hamilton", car: .mercedes),
+                    Answer(title: "Valtteri Bottas", car: .lada),
+                    Answer(title: "Fernando Alonso", car: .bmw)
+                ]
+            ),
+            
+            Question(
+                title: "What amount of maintenance is acceptable for you",
+                answers: [
+                    Answer(title: "1000", car: .mercedes),
+                    Answer(title: "800", car: .bmw),
+                    Answer(title: "600", car: .toyota),
+                    Answer(title: "300", car: .ford),
+                    Answer(title: "<100", car: .lada)
+                ]
+            ),
+            
+            Question(
+                title: "How often are you willing to service your car",
+                answers: [
+                    Answer(title: "3.000 mile", car: .bmw),
+                    Answer(title: "6.000 mile", car: .mercedes),
+                    Answer(title: "9.000 mile", car: .ford),
+                    Answer(title: "12.000 mile", car: .lada),
+                    Answer(title: ">15.000 mile", car: .toyota)
+                ]
+            ),
+            
+            Question(
+                title: "Favorite time of year and weather for driving",
+                answers: [
+                    Answer(title: "Summer - dry - hot", car: .lada),
+                    Answer(title: "Spring - dry - sunset", car: .toyota),
+                    Answer(title: "Autumn - dry - cool", car: .ford),
+                    Answer(title: "Autumn - rainy - slush", car: .mercedes),
+                    Answer(title: "Winter - loose snow - cool", car: .bmw)
+                ]
+            ),
+            
+            Question(
+                title: "How much internal combustion engine do you feel you would (want) to have at the moment?",
+                answers: [
+                    Answer(title: "2.0 (150 h/p)", car: .lada),
+                    Answer(title: "2.5 (200 h/p)", car: .toyota),
+                    Answer(title: "3.0 (270 h/p)", car: .ford),
+                    Answer(title: "4.0 (350 h/p)", car: .bmw),
+                    Answer(title: ">5.0 (450 h/p +)", car: .mercedes)
+                ]
+            ),
+        ]
+    }
 }
 
 struct Answer {
     let title: String
     let car: Car
 }
-
-//enum QuestionType {
-//    case speed
-//    case manner
-//    case fear
-//    case film
-//}
 
 enum Car: String {
     case bmw = "BMW M5"
@@ -162,6 +258,21 @@ enum Car: String {
             "Да, не BMW. Да не Mercedes. Но вы все равно будете пытаться унизить их при каждой возможности, хоть и в глубине души хотеть их. Вы не всегда делаете что хотите, но делаете это хорошо. Девушки конечно не обращают на вас большого внимания, зато в узком и закрытом кругу мужчин вы очень популярны."
         case .lada:
             "Вам этот мир абсолютно понятен, вокруг одни воры и вы будете делать все чтобы не уступать им и не пропускать их. Вы честный человек, вас все пытаются обмануть, но вы не глупый, и знаете что важнее всего внутренний мир а не обложка."
+        }
+    }
+    
+    var image: String {
+        switch self {
+        case .bmw:
+            "QuizM5"
+        case .toyota:
+            "QuizCumry"
+        case .mercedes:
+            "QuizG-class"
+        case .ford:
+            "QuizFocusST"
+        case .lada:
+            "QuizVesta"
         }
     }
 }

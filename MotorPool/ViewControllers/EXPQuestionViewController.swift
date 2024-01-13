@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
-class EXPQuestionViewController: UIViewController {
+final class EXPQuestionViewController: UIViewController {
+    
+    @IBOutlet var languageSwitchSegmentedControl: UISegmentedControl!
+    
     
     @IBOutlet var questionStackView: UIStackView!
     @IBOutlet var questionTitleLabel: UILabel! {
@@ -30,21 +34,35 @@ class EXPQuestionViewController: UIViewController {
     @IBOutlet var resultTitle: UILabel!
     @IBOutlet var resultDescription: UILabel!
     
+    @IBOutlet var completeButton: UIButton! {
+        didSet {
+            completeButton.layer.borderWidth = 0.5
+            completeButton.layer.borderColor = UIColor.white.cgColor
+            completeButton.layer.cornerRadius = 10
+        }
+    }
+    
     @IBOutlet var questionProgressView: UIProgressView!
     
-    private let questions = Question.getQuestion()
+    private let questions = Question.getQuestionRU().shuffled()
+    private let questionsENG = Question.getQuestionENG().shuffled()
     private var answersChosen: [Answer] = []
     private var questionIndex = 0
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultStackView.isHidden = true
         
-        displayingTheDesiredQuestion()        
+        displayingTheDesiredQuestion()
     }
+    
+    @IBAction func completeButtonDidTapped() {
+        dismiss(animated: true)
+    }
+    
     
     @IBAction func choosingAnAnswer(_ sender: UIButton) {
         guard let buttonIndex = questionAnswers.firstIndex(of: sender) else { return }
@@ -52,10 +70,6 @@ class EXPQuestionViewController: UIViewController {
         let answer = currentAnswers[buttonIndex]
         answersChosen.append(answer)
         
-        print("buttonIndex")
-        print(buttonIndex)
-        print("answer")
-        print(answer)
         nextQuestion()
         displayingTheDesiredQuestion()
     }
@@ -67,26 +81,30 @@ private extension EXPQuestionViewController {
         if questionIndex < questions.count - 1 {
             questionIndex += 1
         } else {
-            questionStackView.isHidden.toggle()
-            resultStackView.isHidden.toggle()
-            quizResult()
+            changeUI()
         }
         
     }
     
+    func changeUI() {
+        questionProgressView.isHidden.toggle()
+        questionStackView.isHidden.toggle()
+        resultStackView.isHidden.toggle()
+        quizResult()
+    }
+    
     func displayingTheDesiredQuestion() {
         
-        questions.forEach { question in
-            
-            let correctTitle = questions[questionIndex].title
-            let correctAnswers = questions[questionIndex].answers
-            
-            questionTitleLabel.text = correctTitle
-            
-            for (answer, button) in zip(correctAnswers, questionAnswers) {
-                button.setTitle(answer.title, for: .normal)
-            }
+        let correctTitle = questions[questionIndex].title
+        let correctAnswers = questions[questionIndex].answers
+        questionTitleLabel.text = correctTitle
+        
+        for (answer, button) in zip(correctAnswers, questionAnswers) {
+            button.setTitle(answer.title, for: .normal)
         }
+        
+        let totalProgress = Float(questionIndex) / Float(questions.count - 1)
+        questionProgressView.setProgress(totalProgress, animated: true)
     }
 }
 
@@ -102,11 +120,11 @@ private extension EXPQuestionViewController {
         let sortedFrequentOfCar = frequencyOfCar.sorted { $0.value > $1.value }
         guard let mostFrequentCar = sortedFrequentOfCar.first?.key else { return }
         
-        updateUI(with: mostFrequentCar)
+        updateQuizView(with: mostFrequentCar)
     }
     
-    func updateUI(with car: Car) {
-        resultImageView.image = UIImage.audi
+    func updateQuizView(with car: Car) {
+        resultImageView.image = UIImage(named: car.image)
         
         resultTitle.text = car.rawValue
         resultDescription.text = car.descriptionRU
