@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstNavigationViewController: UINavigationController {
+final class AutoListNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

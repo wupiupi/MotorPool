@@ -20,7 +20,7 @@ final class TabBarViewController: UITabBarController {
     
     private func fetchData() {
         self.viewControllers?.forEach { viewController in
-            if let navVC = viewController as? FirstNavigationViewController {
+            if let navVC = viewController as? AutoListNavigationController {
                 guard let autoList = navVC.topViewController as? AutoListViewController else { return }
                 autoList.user = user
             } else if let totalInfoVC = viewController as? TotalInfoViewController {

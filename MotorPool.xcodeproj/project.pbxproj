@@ -28,7 +28,7 @@
 		CD179CD32B35AA9C00BE4ADA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */; };
 		CD375F292B344A1E00A6285F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD375F282B344A1E00A6285F /* User.swift */; };
 		CD69C0862B35F67D00AFD8F9 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = CD69C0852B35F67D00AFD8F9 /* .gitattributes */; };
-		CD8B58982B4E9E470039CFAB /* FirstNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */; };
+		CD8B58982B4E9E470039CFAB /* AutoListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B58972B4E9E470039CFAB /* AutoListNavigationController.swift */; };
 		CD9E7A2A2B342BC700A375EE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CD9E7A292B342BC700A375EE /* .gitignore */; };
 		CD9E7A312B343B7400A375EE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E7A302B343B7400A375EE /* DataStore.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,7 @@
 		CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CD375F282B344A1E00A6285F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CD69C0852B35F67D00AFD8F9 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
-		CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNavigationViewController.swift; sourceTree = "<group>"; };
+		CD8B58972B4E9E470039CFAB /* AutoListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoListNavigationController.swift; sourceTree = "<group>"; };
 		CD9E7A292B342BC700A375EE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CD9E7A302B343B7400A375EE /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,11 +130,11 @@
 			children = (
 				CD179CAE2B35931100BE4ADA /* LoginViewController.swift */,
 				CD179CB52B35979400BE4ADA /* TabBarViewController.swift */,
+				CD8B58972B4E9E470039CFAB /* AutoListNavigationController.swift */,
 				CD179CB72B35997F00BE4ADA /* AutoListViewController.swift */,
 				CD179CD22B35AA9C00BE4ADA /* DetailsViewController.swift */,
 				46A1C13D2B3C886200BB4F7E /* TotalInfoViewController.swift */,
 				46A1C1642B45C77F00BB4F7E /* FuelInfoViewController.swift */,
-				CD8B58972B4E9E470039CFAB /* FirstNavigationViewController.swift */,
 				469915D42B517FFF00026A7F /* QuizViewController.swift */,
 			);
 			path = ViewControllers;
@@ -260,7 +260,7 @@
 				CD375F292B344A1E00A6285F /* User.swift in Sources */,
 				A0624C2F2B34191F00AFF55C /* SceneDelegate.swift in Sources */,
 				46A1C1412B3E0D8600BB4F7E /* TotalCarsTableViewCell.swift in Sources */,
-				CD8B58982B4E9E470039CFAB /* FirstNavigationViewController.swift in Sources */,
+				CD8B58982B4E9E470039CFAB /* AutoListNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
