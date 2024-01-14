@@ -67,7 +67,7 @@ final class TotalInfoViewController: UIViewController {
         navigationBar.standardAppearance = totalInfoNavigationBar
     }
     
-    // MARK: IBAction func
+    // MARK: IBActions
     @IBAction func randomCarDidTapped() {
         animateOut(view: randomCarView)
     }
