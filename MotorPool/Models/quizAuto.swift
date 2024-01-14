@@ -9,117 +9,25 @@ import Foundation
 
 struct Question {
     
-    let title: String
-    let answers: [Answer]
+    let titleRU: String
+    let titleENG: String
     
-    static func getQuestionRU() -> [Question] {
+    var answersRU: [Answer]
+    var answersENG: [Answer]
+    
+    static func getQuestion() -> [Question] {
         [
             Question(
-                title: "Ваша комфортная скорость",
-                answers: [
+                titleRU: "Ваша комфортная скорость",
+                titleENG: "Your comfortable speed",
+                answersRU: [
                     Answer(title: "50 км/ч", car: .lada),
                     Answer(title: "70 км/ч", car: .toyota),
                     Answer(title: "90 км/ч", car: .mercedes),
                     Answer(title: "110 км/ч", car: .mercedes),
                     Answer(title: ">130 км/ч", car: .bmw)
-                ]
-            ),
-            
-            Question(
-                title: "Ваша манера езды",
-                answers: [
-                    Answer(title: "Спокойная", car: .toyota),
-                    Answer(title: "Агрессивная", car: .bmw),
-                    Answer(title: "Вежливая", car: .ford),
-                    Answer(title: "Скандалист", car: .mercedes),
-                    Answer(title: "Тормоз", car: .lada)
-                ]
-            ),
-            
-            Question(
-                title: "Самый большой страх в пути",
-                answers: [
-                    Answer(title: "Закончится масло в ДВС", car: .bmw),
-                    Answer(title: "Спустит колесо", car: .ford),
-                    Answer(title: "Занесет", car: .toyota),
-                    Answer(title: "Разборки", car: .lada),
-                    Answer(title: "Любая ошибка на БК", car: .mercedes)
-                ]
-            ),
-            
-            Question(
-                title: "Какой фильм про гонки вам понравился больше всего",
-                answers: [
-                    Answer(title: "Гран Туризмо (2023)", car: .mercedes),
-                    Answer(title: "Ford против Ferrari (2019)", car: .ford),
-                    Answer(title: "Форсаж (2015)", car: .bmw),
-                    Answer(title: "Драйв (2011)", car: .toyota),
-                    Answer(title: "Такси (1998)", car: .lada)
-                ]
-            ),
-            
-            Question(
-                title: "Какого гонщика вы выберите",
-                answers: [
-                    Answer(title: "Max Verstappen", car: .ford),
-                    Answer(title: "Sebastian Vettel", car: .toyota),
-                    Answer(title: "Lewis Hamilton", car: .mercedes),
-                    Answer(title: "Valtteri Bottas", car: .lada),
-                    Answer(title: "Fernando Alonso", car: .bmw)
-                ]
-            ),
-            
-            Question(
-                title: "Какая сумма ТО для вас допустима",
-                answers: [
-                    Answer(title: "90.000", car: .mercedes),
-                    Answer(title: "60.000", car: .bmw),
-                    Answer(title: "30.000", car: .toyota),
-                    Answer(title: "15.000", car: .ford),
-                    Answer(title: "<10.000", car: .lada)
-                ]
-            ),
-            
-            Question(
-                title: "На сколько часто вы готовы обслуживать машину",
-                answers: [
-                    Answer(title: "6.000 км", car: .bmw),
-                    Answer(title: "8.000 км", car: .mercedes),
-                    Answer(title: "10.000 км", car: .ford),
-                    Answer(title: "15.000 км", car: .lada),
-                    Answer(title: ">20.000 км", car: .toyota)
-                ]
-            ),
-            
-            Question(
-                title: "Любимое время года и погода для езды",
-                answers: [
-                    Answer(title: "Лето - сухо - жарко", car: .lada),
-                    Answer(title: "Весна - сухо - закат", car: .toyota),
-                    Answer(title: "Осень - сухо - прохладно", car: .ford),
-                    Answer(title: "Осень - дождливо - слякоть", car: .mercedes),
-                    Answer(title: "Зима - рыхлый снег - прохладно", car: .bmw)
-                ]
-            ),
-            
-            Question(
-                title: "По ощущениям, какого объема ДВС вам бы хватило (хотелось) в данный момент",
-                answers: [
-                    Answer(title: "2.0 (150 л/с)", car: .lada),
-                    Answer(title: "2.5 (200 л/с)", car: .toyota),
-                    Answer(title: "3.0 (270 л/с)", car: .ford),
-                    Answer(title: "4.0 (350 л/с)", car: .bmw),
-                    Answer(title: ">5.0 (450 л/с +)", car: .mercedes)
-                ]
-            ),
-        ]
-    }
-    
-    static func getQuestionENG() -> [Question] {
-        [
-            Question(
-                title: "Your comfortable speed",
-                answers: [
+                ],
+                answersENG: [
                     Answer(title: "30 mph", car: .lada),
                     Answer(title: "45 mph", car: .toyota),
                     Answer(title: "60 mph", car: .mercedes),
@@ -129,8 +37,16 @@ struct Question {
             ),
             
             Question(
-                title: "Your driving style",
-                answers: [
+                titleRU: "Ваша манера езды",
+                titleENG: "Your driving style",
+                answersRU: [
+                    Answer(title: "Спокойная", car: .toyota),
+                    Answer(title: "Агрессивная", car: .bmw),
+                    Answer(title: "Вежливая", car: .ford),
+                    Answer(title: "Скандалист", car: .mercedes),
+                    Answer(title: "Тормоз", car: .lada)
+                ],
+                answersENG: [
                     Answer(title: "Calm", car: .toyota),
                     Answer(title: "Aggressive", car: .bmw),
                     Answer(title: "Polite", car: .ford),
@@ -140,8 +56,16 @@ struct Question {
             ),
             
             Question(
-                title: "Biggest fear on the road",
-                answers: [
+                titleRU: "Самый большой страх в пути",
+                titleENG: "Biggest fear on the road",
+                answersRU: [
+                    Answer(title: "Закончится масло в ДВС", car: .bmw),
+                    Answer(title: "Спустит колесо", car: .ford),
+                    Answer(title: "Занесет", car: .toyota),
+                    Answer(title: "Разборки", car: .lada),
+                    Answer(title: "Любая ошибка на БК", car: .mercedes)
+                ],
+                answersENG: [
                     Answer(title: "The engine will run out of oil", car: .bmw),
                     Answer(title: "Flat tire", car: .ford),
                     Answer(title: "Will skid", car: .toyota),
@@ -151,8 +75,16 @@ struct Question {
             ),
             
             Question(
-                title: "Which racing movie did you like best",
-                answers: [
+                titleRU: "Какой фильм про гонки вам понравился больше всего",
+                titleENG: "Which racing movie did you like best",
+                answersRU: [
+                    Answer(title: "Гран Туризмо (2023)", car: .mercedes),
+                    Answer(title: "Ford против Ferrari (2019)", car: .ford),
+                    Answer(title: "Форсаж (2015)", car: .bmw),
+                    Answer(title: "Драйв (2011)", car: .toyota),
+                    Answer(title: "Такси (1998)", car: .lada)
+                ],
+                answersENG: [
                     Answer(title: "Gran Turismo (2023)", car: .mercedes),
                     Answer(title: "Ford vs Ferrari (2019)", car: .ford),
                     Answer(title: "Fast and Furious (2015)", car: .bmw),
@@ -162,8 +94,16 @@ struct Question {
             ),
             
             Question(
-                title: "Which racer will you choose",
-                answers: [
+                titleRU: "Какого гонщика вы выберите",
+                titleENG: "Which racer will you choose",
+                answersRU: [
+                    Answer(title: "Max Verstappen", car: .ford),
+                    Answer(title: "Sebastian Vettel", car: .toyota),
+                    Answer(title: "Lewis Hamilton", car: .mercedes),
+                    Answer(title: "Valtteri Bottas", car: .lada),
+                    Answer(title: "Fernando Alonso", car: .bmw)
+                ],
+                answersENG: [
                     Answer(title: "Max Verstappen", car: .ford),
                     Answer(title: "Sebastian Vettel", car: .toyota),
                     Answer(title: "Lewis Hamilton", car: .mercedes),
@@ -173,19 +113,35 @@ struct Question {
             ),
             
             Question(
-                title: "What amount of maintenance is acceptable for you",
-                answers: [
-                    Answer(title: "1000", car: .mercedes),
-                    Answer(title: "800", car: .bmw),
-                    Answer(title: "600", car: .toyota),
-                    Answer(title: "300", car: .ford),
-                    Answer(title: "<100", car: .lada)
+                titleRU: "Какая сумма ТО для вас допустима",
+                titleENG: "What amount of maintenance is acceptable for you",
+                answersRU: [
+                    Answer(title: "90.000 ₽", car: .mercedes),
+                    Answer(title: "60.000 ₽", car: .bmw),
+                    Answer(title: "30.000 ₽", car: .toyota),
+                    Answer(title: "15.000 ₽", car: .ford),
+                    Answer(title: "<10.000 ₽", car: .lada)
+                ],
+                answersENG: [
+                    Answer(title: "1000 $", car: .mercedes),
+                    Answer(title: "800 $", car: .bmw),
+                    Answer(title: "600 $", car: .toyota),
+                    Answer(title: "300 $", car: .ford),
+                    Answer(title: "<100 $", car: .lada)
                 ]
             ),
             
             Question(
-                title: "How often are you willing to service your car",
-                answers: [
+                titleRU: "На сколько часто вы готовы обслуживать машину",
+                titleENG: "How often are you willing to service your car",
+                answersRU: [
+                    Answer(title: "6.000 км", car: .bmw),
+                    Answer(title: "8.000 км", car: .mercedes),
+                    Answer(title: "10.000 км", car: .ford),
+                    Answer(title: "15.000 км", car: .lada),
+                    Answer(title: ">20.000 км", car: .toyota)
+                ],
+                answersENG: [
                     Answer(title: "3.000 mile", car: .bmw),
                     Answer(title: "6.000 mile", car: .mercedes),
                     Answer(title: "9.000 mile", car: .ford),
@@ -195,8 +151,16 @@ struct Question {
             ),
             
             Question(
-                title: "Favorite time of year and weather for driving",
-                answers: [
+                titleRU: "Любимое время года и погода для езды",
+                titleENG: "Favorite time of year and weather for driving",
+                answersRU: [
+                    Answer(title: "Лето - сухо - жарко", car: .lada),
+                    Answer(title: "Весна - сухо - закат", car: .toyota),
+                    Answer(title: "Осень - сухо - прохладно", car: .ford),
+                    Answer(title: "Осень - дождливо - слякоть", car: .mercedes),
+                    Answer(title: "Зима - рыхлый снег - прохладно", car: .bmw)
+                ],
+                answersENG: [
                     Answer(title: "Summer - dry - hot", car: .lada),
                     Answer(title: "Spring - dry - sunset", car: .toyota),
                     Answer(title: "Autumn - dry - cool", car: .ford),
@@ -206,8 +170,16 @@ struct Question {
             ),
             
             Question(
-                title: "How much internal combustion engine do you feel you would (want) to have at the moment?",
-                answers: [
+                titleRU: "По ощущениям, какого объема ДВС вам бы хватило (хотелось) в данный момент",
+                titleENG: "How much internal combustion engine do you feel you would (want) to have at the moment",
+                answersRU: [
+                    Answer(title: "2.0 (150 л/с)", car: .lada),
+                    Answer(title: "2.5 (200 л/с)", car: .toyota),
+                    Answer(title: "3.0 (270 л/с)", car: .ford),
+                    Answer(title: "4.0 (350 л/с)", car: .bmw),
+                    Answer(title: ">5.0 (450 л/с +)", car: .mercedes)
+                ],
+                answersENG: [
                     Answer(title: "2.0 (150 h/p)", car: .lada),
                     Answer(title: "2.5 (200 h/p)", car: .toyota),
                     Answer(title: "3.0 (270 h/p)", car: .ford),

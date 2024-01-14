@@ -616,6 +616,9 @@
                                     <segment title="RU"/>
                                     <segment title="ENG"/>
                                 </segments>
+                                <connections>
+                                    <action selector="languageSwitch" destination="5N4-43-9wh" eventType="valueChanged" id="pPp-0n-GnB"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lcp-z4-jAt"/>
