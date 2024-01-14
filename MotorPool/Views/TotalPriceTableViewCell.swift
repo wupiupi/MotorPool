@@ -12,7 +12,10 @@ final class TotalPriceTableViewCell: UITableViewCell {
     @IBOutlet var priceSegmentedControl: UISegmentedControl! {
         didSet {
             priceSegmentedControl.selectedSegmentTintColor = .black
-            priceSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+            priceSegmentedControl.setTitleTextAttributes(
+                [NSAttributedString.Key.foregroundColor: UIColor.white],
+                for: .selected
+            )
         }
     }
     

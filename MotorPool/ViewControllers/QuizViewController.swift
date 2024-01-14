@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EXPQuestionViewController: UIViewController {
+final class QuizViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet var languageSwitchSegmentedControl: UISegmentedControl!
@@ -60,7 +60,7 @@ final class EXPQuestionViewController: UIViewController {
         displayQuestion()
     }
     
-    // MARK: IBAction
+    // MARK: IBActions
     @IBAction func completeButtonDidTapped() {
         dismiss(animated: true)
     }
@@ -82,8 +82,8 @@ final class EXPQuestionViewController: UIViewController {
     }
 }
 
-// MARK: Question
-private extension EXPQuestionViewController {
+// MARK: Question quiz
+private extension QuizViewController {
     func nextQuestion() {
         
         if questionIndex < questions.count - 1 {
@@ -120,7 +120,7 @@ private extension EXPQuestionViewController {
 }
 
 // MARK: Result quiz
-private extension EXPQuestionViewController {
+private extension QuizViewController {
     func quizSortedCar() -> Car {
         var frequencyOfCar: [Car: Int] = [:]
         let cars = answersChosen.map { $0.car }
