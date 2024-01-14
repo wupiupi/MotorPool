@@ -125,6 +125,9 @@ extension TotalInfoViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
 }
 
 // MARK: UITableViewDelegate
@@ -179,6 +182,13 @@ extension TotalInfoViewController: UITableViewDelegate {
             break
         }
         return sectionSize
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = .white
+        footerView.alpha = 0.1
+        return footerView
     }
 }
 
