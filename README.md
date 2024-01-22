@@ -5,4 +5,4 @@
 
 
 
-_team: wupiupi, ice43 and pave1iOS_
+_by wupiupi, ice43 & Pavel Gribachev_
