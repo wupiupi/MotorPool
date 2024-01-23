@@ -61,7 +61,7 @@ final class FuelInfoViewController: UIViewController {
         fuelCountTextField.text = string(from: fuelCountSlider)
     }
     
-    @IBAction private func doneButtonDidTapped() {
+    @IBAction func doneButtonDidTapped() {
         dismiss(animated: true)
     }
 }

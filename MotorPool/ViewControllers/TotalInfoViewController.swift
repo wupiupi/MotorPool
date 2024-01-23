@@ -60,9 +60,7 @@ final class TotalInfoViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
-        view.backgroundColor = .red
-        
+                
         totalInfoNavigationBar.configureWithTransparentBackground()
         navigationBar.standardAppearance = totalInfoNavigationBar
     }
@@ -107,24 +105,31 @@ extension TotalInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) 
-            as? FavoriteCarTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "favoriteCell",
+                for: indexPath
+            ) as? FavoriteCarTableViewCell else { return UITableViewCell() }
             
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "totalCell", for: indexPath) 
-            as? TotalCarsTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "totalCell",
+                for: indexPath
+            ) as? TotalCarsTableViewCell else { return UITableViewCell() }
             
             return cell
         case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell", for: indexPath) 
-            as? TotalPriceTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "priceCell",
+                for: indexPath
+            ) as? TotalPriceTableViewCell else { return UITableViewCell() }
             
             return cell
         default:
             return UITableViewCell()
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1
     }
@@ -138,23 +143,26 @@ extension TotalInfoViewController: UITableViewDelegate {
         switch section {
         case 0:
             let favoriteCar = favoriteCar()
-            let favoriteCell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell")
-            as? FavoriteCarTableViewCell
+            let favoriteCell = tableView.dequeueReusableCell(
+                withIdentifier: "favoriteCell"
+            ) as? FavoriteCarTableViewCell
         
             favoriteCell?.brandImageView.image = UIImage(named: favoriteCar)
             favoriteCell?.brandNameLabel.text = favoriteCar
             
             return favoriteCell
         case 1:
-            let totalCell = tableView.dequeueReusableCell(withIdentifier: "totalCell")
-            as? TotalCarsTableViewCell
+            let totalCell = tableView.dequeueReusableCell(
+                withIdentifier: "totalCell"
+            ) as? TotalCarsTableViewCell
     
             totalCell?.totalLabel.text = totalCar()
             
             return totalCell
         case 2:
-            let priceCell = tableView.dequeueReusableCell(withIdentifier: "priceCell")
-            as? TotalPriceTableViewCell
+            let priceCell = tableView.dequeueReusableCell(
+                withIdentifier: "priceCell"
+            ) as? TotalPriceTableViewCell
             
             priceCell?.priceLabel.text = priceInUSD()
             
