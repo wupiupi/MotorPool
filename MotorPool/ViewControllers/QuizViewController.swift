@@ -161,10 +161,6 @@ private extension QuizViewController {
         resultImageView.image = UIImage(named: resultCar.image)
         resultTitle.text = resultCar.rawValue
         
-        if languageSwitchSegmentedControl.selectedSegmentIndex == 0 {
-            resultDescription.text = resultCar.descriptionRU
-        } else {
-            resultDescription.text = resultCar.descriptionENG
-        }
+        quizDescription()
     }
 }
