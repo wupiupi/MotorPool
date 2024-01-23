@@ -185,7 +185,7 @@ extension TotalInfoViewController: UITableViewDelegate {
         case 1:
             sectionSize = 130
         case 2:
-            sectionSize = 80
+            sectionSize = 100
         default:
             break
         }
