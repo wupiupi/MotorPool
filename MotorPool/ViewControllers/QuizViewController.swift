@@ -50,6 +50,8 @@ final class QuizViewController: UIViewController {
     private var currentAnswers: [Answer] {
         questions[questionIndex].answersRU
     }
+    
+    private var resultCar: Car!
 
     // MARK: ViewDidLoad
     override func viewDidLoad() {
@@ -68,7 +70,9 @@ final class QuizViewController: UIViewController {
     @IBAction func languageSwitch() {
         displayQuestion()
         
-        resultDescription.text = quizDescription()
+        if questionIndex == questions.count - 1 {
+            quizDescription()
+        }
     }
     
     @IBAction func choosingAnAnswer(_ sender: UIButton) {
@@ -113,7 +117,7 @@ private extension QuizViewController {
                 button.setTitle(answer.title, for: .normal)
             }
         }
-            
+        
         let totalProgress = Float(questionIndex) / Float(questions.count - 1)
         questionProgressView.setProgress(totalProgress, animated: true)
     }
@@ -135,19 +139,17 @@ private extension QuizViewController {
         return mostFrequentCar
     }
     
-    func quizDescription() -> String{
-        let car = quizSortedCar()
+    func quizDescription() {
         
         if languageSwitchSegmentedControl.selectedSegmentIndex == 0 {
-            resultDescription.text = car.descriptionRU
+            resultDescription.text = resultCar.descriptionRU
         } else {
-            resultDescription.text = car.descriptionENG
+            resultDescription.text = resultCar.descriptionENG
         }
-        return resultDescription.text ?? ""
     }
     
     func showResultQuiz() {
-        let car = quizSortedCar()
+        resultCar = quizSortedCar()
         
         completeButton.layer.borderColor = UIColor.systemGreen.cgColor
         completeButton.layer.borderWidth = 2
@@ -156,8 +158,13 @@ private extension QuizViewController {
         questionStackView.isHidden.toggle()
         resultStackView.isHidden.toggle()
         
-        resultImageView.image = UIImage(named: car.image)
-        resultTitle.text = car.rawValue
-        resultDescription.text = quizDescription()
+        resultImageView.image = UIImage(named: resultCar.image)
+        resultTitle.text = resultCar.rawValue
+        
+        if languageSwitchSegmentedControl.selectedSegmentIndex == 0 {
+            resultDescription.text = resultCar.descriptionRU
+        } else {
+            resultDescription.text = resultCar.descriptionENG
+        }
     }
 }
